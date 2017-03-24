@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>.NET in the Box</title>
+		<title>Docker für Leichtmatrosen</title>
 
 		<meta name="description" content=".NET in the Box">
     	<meta name="author" content="Frank Pommerening">
@@ -39,9 +39,9 @@
 		<div class="reveal">
 			<div class="slides">
 				<section>
-				<h1>.NET in the Box</h1>
-                <h2>Spartakiade 2017</h2>
-				<img src="images/logo_spartakiade.png" style="border:0px;width:200px"/>
+				<h1>Docker für Leichtmatrosen</h1>
+                <h2>.NET User Group Leipzig</h2>
+				<h3>28.03.2017</h3>
             	</section>
 				<section>
 				  <section>
@@ -546,71 +546,6 @@ ENTRYPOINT ["dotnet", "WebApp.dll"]
 					<br/>
 					<br/>
 					<p class="fragment">Hauptziele: Übersicht erhöhen / Imagegröße reduzieren</p>
-			</section>
-			</section>
-			<section>
-				<section>
-					<h2>Build .Net Core App</h2>
-					<img src="images/DockerDotNET.jpg" alt="Logo .net and docker"/ style="border: 0; height: 500px">
-				</section>
-				<section>
-					<h3>Build inside</h3>
-					Die Anwendung wird im Container während der Imageerstellung gebaut.
-					<br />
-					<br />
-<table>
-	 <tbody>
-		 <tr>
-			 <th>Vorteile</th>
-			 <th>Nachteile</th>
-		 </tr>
-		 <tr>
-			 <td>
-				<ul>
-					<li>Buildserver nicht erforderlich</li>
-					<li>Weniger komplex</li>
-				</ul>
-			 </td>
-			<td>
-				<ul>
-					<li>Quellcode und Buildabhängigkeiten ggf. im Image enthalten</li>
-					<li>Basisimage größer (SDK erforderlich)</li>
-					<li>i.d.R. entstehen größere Images</li>
-					<li>Buildfehler schwerer zu debuggen</li>
-				</ul>
-			</td>
-		 </tr>
-</tbody>
-</table>
-				</section>
-				<section>
-					<h3>Build outside</h3>
-					Die Anwendung wird unabhängig vom Container erstellt. Die entstandenen Artefakte werden bei der Imageerstellung kopiert.
-					<br />
-					<br />
-			<table>
-	 <tbody>
-		 <tr>
-			 <th>Vorteile</th>
-			 <th>Nachteile</th>
-		 </tr>
-		 <tr>
-			 <td>
-				<ul>
-					<li>i.d.R. kleinere Images und Basisimages</li>
-					<li>Build unabhängig von der Imageestellung</li>
-					<li>Quellcode und Buildabhängigkeiten nicht enthalten</li>
-				</ul>
-			 </td>
-			<td>
-				<ul>
-					<li>Infrastruktur für Build erforderlich</li>
-					<li>Trennung erzeugt Komplexität</li>
-				</ul>
-			</td>
-		 </tr>
-</tbody>
-</table>
 				</section>
 			</section>
 			<section>
@@ -911,69 +846,6 @@ volumes:
 </table>	
 				</section>
 			</section>
-
-
-			<section>
-				<section>
-					<h2>Containerfertige .Net (Core) App</h2>
-					<img src="images/DockerDotNET.jpg" alt="Logo .net and docker"/ style="border: 0; height: 500px">
-				</section>
-				<section>
-					<h3>Konfiguration / Einstellungen</h3>
-					<ul>
-						<li>Einfache Implementierung in .NET Anwendung</li>
-						<li>Gute Integration in Docker-Ökosystem</li>
-						<li>Plattformabhängigkeit</li>
-						<li>Support von verschiedenen Umgebungen: Entwicklung, Test und Produktion</li>
-					<ul>
-						<br />
-			<table>
-	 <tbody>
-		 <tr>
-			 <th>Ungeeignet</th>
-			 <th>Alternativen</th>
-		 </tr>
-		 <tr>
-			 <td>Registry</td>
-			 <td>Zentrale Service-Discovery</td>
-		 </tr>
-		 <tr>
-			 <td>Config-Dateien</td>
-			 <td>Environment Variables</td>
-		 </tr>
-</tbody>
-</table>
-				</section>
-				<section>
-					<h3>Logging <span class="fragment"> JA</span> </h3>
-					<br />
-					<span class="fragment">Datei</span> <span class="fragment"> NEIN</span><br />
-					<span class="fragment">Console</span> <span class="fragment">JA</span><br />
-					<span class="fragment">aber formatiert</span>
-					<p class="fragment">
-					Vorteile:
-					<ul>
-						<li>Kein Problem mit verteilte Umgebung</li>
-						<li>Gute Integration ins Ökosystem</li>
-						<li>Einfach zu implementieren</li>
-					</ul>
-					</p>
-				</section>
-				<section>
-					<h3>Microservice mit .net</h3>
-					<ul>
-						<li>Verwendung eines gemeinsamen Basisimage 
-							<ul>
-								<li>Gleiche Version von .net und Abhängigkeiten für alle Serviceimages</li>
-								<li>Geringere Build-Zeiten</li>
-							</ul>
-						</li>
-						<li>Infrastruktur-Container ggf. trotz Abhängigkeit  noch nicht verfügbar (Reliability / Retry) </li>
-						<li>Build outside bevorzugen</li>
-						<li>Linux-Container besser auf Linux statt Windows-Host erstellen</li>
-					</ul>
-				</section>
-			</section>
 			<section>
 				<section>
 					<h2>Docker auf Raspberry PI 3</h2>
@@ -989,110 +861,6 @@ volumes:
 sudo usermod -aG docker pi
 sudo systemctl enable docker
 sudo systemctl start docker</code></pre>
-				</section>
-				<section>
-					<h3>Build .net App</h3>
-					Die Unterstützung der ARM-Plattform für .net core ist noch in Entwicklung.
-					Deshalb sollte man aktuell auf Mono von Xamarin / Microsoft zurückgreifen.
-					<br />
-					<br />
-					Images die auf x86/x64 erstellt wurden, sind auf dem Raspberry nicht lauffähig!
-					<br />
-					<br />
-					Verwendung spezieller Basisimages erforderlich<br />
-					<ul>
-						<li>resin/rpi-raspbian</li>
-						<li>resin/raspberrypi3-debian</li>
-						<li>yyolk/rpi-archlinuxarm</li>
-						<li>ioft/armhf-ubuntu</li>
-					</ul>
-				</section>
-			</section>
-			
-			<section>
-				<section>
-					<h2>GitHub + Docker Hub</h2>
-				</section>
-				<section>
-				Die Verknüpfung von GitHub und Docker Hub gestattet eine automatische Erstellung der Container mit jeder Codeänderung.
-				<img src="images/githubdockerhub.svg" alt="schema flow github and dockerhub" style="border: 0"/>
-				Voraussetzungen:
-				<ul>
-					<li>Accounts bei GitHub und Docker Hub existieren</li>
-					<li>Quellcode inkl. Dockerfile ist in einem Repository auf GitHub vorhanden</li>
-				</ul>
-				</section>
-				<section>
-					<h3>Verbindung GitHub und Docker Hub</h3>
-					<ol start="1">
-						<li>Login bei Docker Hub</li>
-						<li>Profil -> Setting -> Linked Accounts & Services</li>
-					</ol>
-					<img src="images/gitdocker_01.png" style="height: 350px"/>
-				</section>
-				<section>
-					<ol start="3">
-						<li>Auswahl des Zugriffs</li>
-					</ol>
-					<br />
-					<img src="images/gitdocker_02.png" style="height: 500px"/>
-				</section>
-				<section>
-					<ol start="4">
-						<li>Autorisierung des Zugriffs</li>
-						<li>Bestätigung mit GitHub-Kennwort</li>
-					</ol>
-					<br />
-					<img src="images/gitdocker_03.png" style="height: 400px"/>
-					<img src="images/gitdocker_04.png" style="height: 250px"/>
-				</section>
-				<section>
-					<h3>Automatischer Build</h3>
-					<ol>
-						<li>Login bei Docker Hub</li>
-						<li>Create -> Create Automated Build</li>
-						<li>Auswahl Herkunft Quellcode (GitHub oder Bitbucket)</li>
-					</ol><br />
-					<img src="images/gitdocker_05.png" style="height: 400px"/>
-				</section>
-				<section>
-					<ol start="4">
-						<li>Auswahl des Quell-Repository</li>
-					</ol>
-					<img src="images/gitdocker_06.png" style="height: 250px"/>
-					
-				</section>
-				<section>
-					<ol start="5">
-						<li>Konfiguration Docker Hub-Repository
-						<ul>
-							<li>Namespace (Fix: Benutzer)</li>
-							<li>Name (Default: Name des GitHub-Repository)</li>
-							<li>Sichtbarkeit (Default: Öffentlich)</li>
-							<li>Kurzbeschreibung (Pflichtfeld)</li>
-						</ul>
-						</li>
-					</ol>
-					<br />
-					<img src="images/gitdocker_07.png" style="height: 400px"/>
-				</section>
-				<section>
-					<ol start="6">
-						<li>Anpassung Build-Einstellungen (Build-Settings)
-							<ul>
-								<li>Pfad zum Dockerfile</li>
-								<li>Definition Tags</li>
-								<li>Verwendete Git-Branches</li>
-							</ul>
-						</li>
-					</ol>
-					<img src="images/gitdocker_08.png" style="height: 400px"/>
-				</section>
-				<section>
-					<ol start="7">
-						<li>Prüfung Build (Build Details)</li>
-					</ol>
-					<img src="images/gitdocker_09.png" style="height: 400px"/>
 				</section>
 			</section>
 			<section>
@@ -1205,69 +973,6 @@ sudo systemctl start docker</code></pre>
 				</section>
 			
 			</section>
-			<section>
-				<section>
-					<h2>.Net Client API</h2>
-				</section>
-				<section>
-					Eine .NET Client API wird offiziell von Microsoft gepflegt.
-					<br />
-					Quellcode: <a href="https://github.com/Microsoft/Docker.DotNet" target="_blank">GitHub</a>
-					<br />
-					Package: <a href="https://www.nuget.org/packages/Docker.DotNet/" target="_blank">Nuget</a>
-					<br />
-					Hinweis: Die Pakete werden nicht synchron mit den Änderungen am Quellcode veröffentlicht. 
-					Bestimmte Funktionen z.B. die Unterstützung für Swarm steht nur als Quellcode bereit.
-				</section>
-				<section>
-					<h3>Verbindungsaufbau</h3>
-					Für den Aufbau der Verbindung können verschiedene Protokolle z.B. Http oder Linux-Sockets verwendet.
-					Letztes erlaubt auch die Verwendung in einem Container.
-					<br />
-					<br />
-					Windows (Docker for Windows)
-					<br />
-					<pre><code class="cs">var client = new DockerClientConfiguration(new Uri(http://localhost:2375)).CreateClient();</code></pre>
-					<br />
-					Linux (innerhalb eines Container)
-					<pre><code class="cs">var client = new DockerClientConfiguration(new Uri(unix://var/run/docker.sock)).CreateClient();</code></pre>
-					Bei Start benötigt der Container zusätzliche Rechte<br />
-					<pre><code class="docker">docker run -d --privileged user/myimage</code></pre>
-				</section>
-				<section>
-					Abfrage Container / Images
-				</section>
-				<section>
-					Container erstellen / löschen / starten / stoppen
-				</section>
-				<section>
-					Beispiel: Webhook für automatische Bereitstellung
-				</section>
-				<section>
-				<section>
-					<h2>CI / DC mit TFS / Visual Studio Team Services</h2>
-				</section>
-				</section>
-				<section>
-					<h3>Konfiguration des Webhook</h3>
-					<img src="images/webhock_01.png" style="height: 350px; float: right">
-					<ol>
-						<li>Login beim Docker Hub</li>
-						<li>Auswahl des Repository</li>
-						<li>Webhooks -> Create a Webhook</li>
-						<li>Name und Ziel-URL festlegen</li>
-						<li>Speichern</li>
-					</ol>
-					<img src="images/webhock_02.png" style="height: 150px; float: left">
-				</section>
-			</section>
-			<!--
-			<section>
-				<section>
-					<h2>CI / DC mit Gitlab</h2>
-				</section>
-			</section>
-			-->
 			<section>
 				<h3>Quellen:</h3>
 				https://blog.docker.com/media/Rancher-Logo-Final-1.png
