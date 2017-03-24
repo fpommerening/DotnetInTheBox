@@ -1,0 +1,633 @@
+<?xml version="1.0"?>
+<svg width="589.3333333333334" height="420" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" xmlns:html="http://www.w3.org/1999/xhtml">
+ <STYLE xmlns="http://www.w3.org/1999/xhtml"/>
+ <defs>
+  <linearGradient y2="NaN" y1="NaN" x2="NaN" x1="NaN" id="MysqWQvpwMWT">
+   <stop stop-color="#6aa84f" offset="0"/>
+   <stop stop-color="#FFFFFF" offset="1"/>
+  </linearGradient>
+  <linearGradient y2="NaN" y1="NaN" x2="NaN" x1="NaN" id="yNTDirRZiyEe">
+   <stop stop-color="#3d85c6" offset="0"/>
+   <stop stop-color="#FFFFFF" offset="1"/>
+  </linearGradient>
+  <linearGradient y2="NaN" y1="NaN" x2="NaN" x1="NaN" id="NESPCJUhOleP">
+   <stop stop-color="#f1c232" offset="0"/>
+   <stop stop-color="#FFFFFF" offset="1"/>
+  </linearGradient>
+  <linearGradient y2="NaN" y1="NaN" x2="NaN" x1="NaN" id="nqcwAArAtphQ">
+   <stop stop-color="#e06666" offset="0"/>
+   <stop stop-color="#FFFFFF" offset="1"/>
+  </linearGradient>
+  <linearGradient y2="NaN" y1="NaN" x2="NaN" x1="NaN" id="CCHoRvgIvWfF">
+   <stop stop-color="#8e7cc3" offset="0"/>
+   <stop stop-color="#FFFFFF" offset="1"/>
+  </linearGradient>
+  <linearGradient y2="NaN" y1="NaN" x2="NaN" x1="NaN" id="TPNvILqDctGV">
+   <stop stop-color="#6aa84f" offset="0"/>
+   <stop stop-color="#FFFFFF" offset="1"/>
+  </linearGradient>
+  <linearGradient y2="NaN" y1="NaN" x2="NaN" x1="NaN" id="UQnTNWCJTevx">
+   <stop stop-color="#3d85c6" offset="0"/>
+   <stop stop-color="#FFFFFF" offset="1"/>
+  </linearGradient>
+  <linearGradient y2="NaN" y1="NaN" x2="NaN" x1="NaN" id="MsUSCoIguXJZ">
+   <stop stop-color="#f1c232" offset="0"/>
+   <stop stop-color="#FFFFFF" offset="1"/>
+  </linearGradient>
+  <linearGradient y2="NaN" y1="NaN" x2="NaN" x1="NaN" id="UoLEdWJNgGdq">
+   <stop stop-color="#e06666" offset="0"/>
+   <stop stop-color="#FFFFFF" offset="1"/>
+  </linearGradient>
+  <linearGradient y2="NaN" y1="NaN" x2="NaN" x1="NaN" id="MXUgcztiXraK">
+   <stop stop-color="#8e7cc3" offset="0"/>
+   <stop stop-color="#FFFFFF" offset="1"/>
+  </linearGradient>
+ </defs>
+ <g>
+  <title>Layer 1</title>
+  <g id="svg_4" transform="matrix(1,0,0,1,15.000000000000114,240) ">
+   <g id="svg_5">
+    <g id="svg_6" transform="translate(0,0) scale(5.5,1) ">
+     <g id="svg_7">
+      <g id="svg_8" transform="scale(0.1818181872367859,1) ">
+       <path id="svg_9" d="m50,0l450,0c27.61424,0 50,22.38576 50,50c0,27.61424 -22.38576,50 -50,50l-450,0c-27.61424,0 -50,-22.38576 -50,-50c0,-27.61424 22.38576,-50 50,-50z" fill="#6d9eeb"/>
+       <path id="svg_10" stroke-width="2" stroke-miterlimit="10" d="m50,0m0,0l450,0c27.61424,0 50,22.38576 50,50c0,27.61424 -22.38576,50 -50,50l-450,0c-27.61424,0 -50,-22.38576 -50,-50c0,-27.61424 22.38576,-50 50,-50z" stroke="#333333" fill="none"/>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+  <g id="svg_11" transform="matrix(1,0,0,1,27,314) ">
+   <g id="svg_12" transform="translate(-352,0) ">
+    <g id="svg_13">
+     <rect id="svg_14" fill-opacity="0" height="18" width="528" y="0" x="352" fill="rgb(0,0,0)"/>
+    </g>
+   </g>
+   <g id="svg_15" transform="translate(-352,0) ">
+    <g id="svg_16">
+     <rect id="svg_17" fill-opacity="0" height="18" width="528" y="0" x="352" fill="rgb(0,0,0)"/>
+    </g>
+   </g>
+   <g id="svg_18" transform="translate(-352,0) ">
+    <g id="svg_19">
+     <rect id="svg_20" fill-opacity="0" height="17" width="175" y="0" x="528" fill="rgb(0,0,0)"/>
+    </g>
+   </g>
+   <g id="svg_21" transform="translate(-352,0) ">
+    <g id="svg_22">
+     <rect id="svg_23" fill-opacity="0" height="17" width="175" y="0" x="528" fill="rgb(0,0,0)"/>
+    </g>
+    <text id="svg_24" y="14" x="528" font-weight="bold" font-style="normal" font-size="16px" font-family="Arial" fill="rgb(0, 0, 0)">Operating</text>
+    <text id="svg_25" y="14" x="608" font-weight="bold" font-style="normal" font-size="16px" font-family="Arial" fill="rgb(0, 0, 0)">System</text>
+    <text id="svg_26" y="14" x="665" font-weight="bold" font-style="normal" font-size="16px" font-family="Arial" fill="rgb(0, 0, 0)">(</text>
+    <text id="svg_27" y="14" x="675" font-weight="bold" font-style="normal" font-size="16px" font-family="Arial" fill="rgb(0, 0, 0)">OS</text>
+    <text id="svg_28" y="14" x="698" font-weight="bold" font-style="normal" font-size="16px" font-family="Arial" fill="rgb(0, 0, 0)">)</text>
+   </g>
+  </g>
+  <g id="svg_29" transform="matrix(1,0,0,1,370,20) ">
+   <g id="svg_30">
+    <g id="svg_31" transform="translate(0,0) scale(1.600000023841858,2.799999952316284) ">
+     <g id="svg_32">
+      <path id="svg_33" d="m0,0l100,0q0,0 0,0l0,100q0,0 0,0l-100,0q0,0 0,0l0,-100q0,0 0,0z" fill="#cfe2f3"/>
+      <g id="svg_34" transform="scale(0.625,0.3571428656578064) ">
+       <path id="svg_35" d="m0,0l160,0q0,0 0,0l0,280q0,0 0,0l-160,0q0,0 0,0l0,-280q0,0 0,0z" fill="none"/>
+       <path id="svg_36" stroke-width="2" stroke-miterlimit="10" d="m0,0m0,0l160,0q0,0 0,0l0,280q0,0 0,0l-160,0q0,0 0,0l0,-280q0,0 0,0z" stroke="#333333" fill="none"/>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+  <g id="svg_37" transform="matrix(1,0,0,1,381,28) ">
+   <g id="svg_38" transform="translate(-138,0) ">
+    <g id="svg_39">
+     <rect id="svg_40" fill-opacity="0" height="14" width="139" y="0" x="138" fill="rgb(0,0,0)"/>
+    </g>
+   </g>
+   <g id="svg_41" transform="translate(-138,0) ">
+    <g id="svg_42">
+     <rect id="svg_43" fill-opacity="0" height="14" width="139" y="0" x="138" fill="rgb(0,0,0)"/>
+    </g>
+   </g>
+   <g id="svg_44" transform="translate(-138,0) ">
+    <g id="svg_45">
+     <rect id="svg_46" fill-opacity="0" height="14" width="54" y="0" x="180" fill="rgb(0,0,0)"/>
+    </g>
+    <text id="svg_47" y="11" x="180" font-weight="normal" font-style="normal" font-size="12px" font-family="Arial" fill="rgb(0, 0, 0)">Container</text>
+   </g>
+   <g id="svg_48" transform="translate(-138,0) ">
+    <g id="svg_49"/>
+   </g>
+   <g id="svg_50" transform="translate(-138,0) ">
+    <g id="svg_51"/>
+   </g>
+  </g>
+  <g id="svg_52" transform="matrix(1,0,0,1,15,350) ">
+   <g id="svg_53">
+    <g id="svg_54" transform="translate(0,0) scale(5.5,0.5) ">
+     <g id="svg_55">
+      <g id="svg_56" transform="scale(0.1818181872367859,2) ">
+       <path id="svg_57" d="m25,0l500,0c13.80712,0 25,11.19288 25,25c0,13.80712 -11.19288,25 -25,25l-500,0c-13.80712,0 -25,-11.19288 -25,-25c0,-13.80712 11.19288,-25 25,-25z" fill="#b7b7b7"/>
+       <path id="svg_58" stroke-width="2" stroke-miterlimit="10" d="m25,0m0,0l500,0c13.80712,0 25,11.19288 25,25c0,13.80712 -11.19288,25 -25,25l-500,0c-13.80712,0 -25,-11.19288 -25,-25c0,-13.80712 11.19288,-25 25,-25z" stroke="#333333" fill="none"/>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+  <g id="svg_59" transform="matrix(1,0,0,1,27,366) ">
+   <g id="svg_60" transform="translate(-454,0) ">
+    <g id="svg_61">
+     <rect id="svg_62" fill-opacity="0" height="18" width="528" y="0" x="454" fill="rgb(0,0,0)"/>
+    </g>
+   </g>
+   <g id="svg_63" transform="translate(-454,0) ">
+    <g id="svg_64">
+     <rect id="svg_65" fill-opacity="0" height="18" width="528" y="0" x="454" fill="rgb(0,0,0)"/>
+    </g>
+   </g>
+   <g id="svg_66" transform="translate(-454,0) ">
+    <g id="svg_67">
+     <rect id="svg_68" fill-opacity="0" height="17" width="73" y="0" x="681" fill="rgb(0,0,0)"/>
+    </g>
+   </g>
+   <g id="svg_69" transform="translate(-454,0) ">
+    <g id="svg_70">
+     <rect id="svg_71" fill-opacity="0" height="17" width="73" y="0" x="681" fill="rgb(0,0,0)"/>
+    </g>
+    <text id="svg_72" y="14" x="681" font-weight="bold" font-style="normal" font-size="16px" font-family="Arial" fill="rgb(0, 0, 0)">Hardware</text>
+   </g>
+  </g>
+  <g id="svg_73" transform="matrix(1,0,0,1,120,20.000000000000014) ">
+   <g id="svg_74">
+    <g id="svg_75" transform="translate(0,0) scale(1.600000023841858,2.799999952316284) ">
+     <g id="svg_76">
+      <path id="svg_77" d="m0,0l100,0q0,0 0,0l0,100q0,0 0,0l-100,0q0,0 0,0l0,-100q0,0 0,0z" fill="#cfe2f3"/>
+      <g id="svg_78" transform="scale(0.625,0.3571428656578064) ">
+       <path id="svg_79" d="m0,0l160,0q0,0 0,0l0,280q0,0 0,0l-160,0q0,0 0,0l0,-280q0,0 0,0z" fill="none"/>
+       <path id="svg_80" stroke-width="2" stroke-miterlimit="10" d="m0,0m0,0l160,0q0,0 0,0l0,280q0,0 0,0l-160,0q0,0 0,0l0,-280q0,0 0,0z" stroke="#333333" fill="none"/>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+  <g id="svg_81" transform="matrix(1,0,0,1,131,28) ">
+   <g id="svg_82" transform="translate(-138,0) ">
+    <g id="svg_83">
+     <rect id="svg_84" fill-opacity="0" height="14" width="139" y="0" x="138" fill="rgb(0,0,0)"/>
+    </g>
+   </g>
+   <g id="svg_85" transform="translate(-138,0) ">
+    <g id="svg_86">
+     <rect id="svg_87" fill-opacity="0" height="14" width="139" y="0" x="138" fill="rgb(0,0,0)"/>
+    </g>
+   </g>
+   <g id="svg_88" transform="translate(-138,0) ">
+    <g id="svg_89">
+     <rect id="svg_90" fill-opacity="0" height="14" width="54" y="0" x="180" fill="rgb(0,0,0)"/>
+    </g>
+    <text id="svg_91" y="11" x="180" font-weight="normal" font-style="normal" font-size="12px" font-family="Arial" fill="rgb(0, 0, 0)">Container</text>
+   </g>
+   <g id="svg_92" transform="translate(-138,0) ">
+    <g id="svg_93"/>
+   </g>
+   <g id="svg_94" transform="translate(-138,0) ">
+    <g id="svg_95"/>
+   </g>
+  </g>
+  <g id="svg_96" transform="matrix(1,0,0,1,95,120.00000000000009) ">
+   <g id="svg_97">
+    <g id="svg_98" transform="translate(0,0) scale(4.5,0.25) ">
+     <g id="svg_99">
+      <g id="svg_100" transform="scale(0.2222222238779068,4) ">
+       <path id="svg_101" d="m12.5,0l425,0c6.90356,0 12.5,5.59644 12.5,12.5c0,6.90356 -5.59644,12.5 -12.5,12.5l-425,0c-6.90356,0 -12.5,-5.59644 -12.5,-12.5c0,-6.90356 5.59644,-12.5 12.5,-12.5z" fill="#e69138"/>
+       <path id="svg_102" stroke-width="2" stroke-miterlimit="10" d="m12.5,0m0,0l425,0c6.90356,0 12.5,5.59644 12.5,12.5c0,6.90356 -5.59644,12.5 -12.5,12.5l-425,0c-6.90356,0 -12.5,-5.59644 -12.5,-12.5c0,-6.90356 5.59644,-12.5 12.5,-12.5z" stroke="#333333" fill="none"/>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+  <g id="svg_103" transform="matrix(1,0,0,1,106,126) ">
+   <g id="svg_104" transform="translate(-408,0) ">
+    <g id="svg_105">
+     <rect id="svg_106" fill-opacity="0" height="14" width="429" y="0" x="408" fill="rgb(0,0,0)"/>
+    </g>
+   </g>
+   <g id="svg_107" transform="translate(-408,0) ">
+    <g id="svg_108">
+     <rect id="svg_109" fill-opacity="0" height="14" width="429" y="0" x="408" fill="rgb(0,0,0)"/>
+    </g>
+   </g>
+   <g id="svg_110" transform="translate(-408,0) ">
+    <g id="svg_111">
+     <rect id="svg_112" fill-opacity="0" height="14" width="22" y="0" x="612" fill="rgb(0,0,0)"/>
+    </g>
+   </g>
+   <g id="svg_113" transform="translate(-408,0) ">
+    <g id="svg_114">
+     <rect id="svg_115" fill-opacity="0" height="14" width="22" y="0" x="612" fill="rgb(0,0,0)"/>
+    </g>
+    <text id="svg_116" y="11" x="612" font-weight="normal" font-style="normal" font-size="12px" font-family="Arial" fill="rgb(0, 0, 0)">App</text>
+   </g>
+  </g>
+  <g id="svg_117" transform="matrix(-1.8369701987210297e-16,-1,1,-1.8369701987210297e-16,34.99999999999998,230.00000000000006) ">
+   <g id="svg_118">
+    <g id="svg_119" transform="translate(0,0) scale(0.8500000238418579,0.5) ">
+     <g id="svg_120">
+      <g id="svg_121" transform="scale(1.1764706373214722,2) ">
+       <path id="svg_122" d="m25,0l35,0c13.80712,0 25,11.19288 25,25c0,13.80712 -11.19288,25 -25,25l-35,0c-13.80712,0 -25,-11.19288 -25,-25c0,-13.80712 11.19288,-25 25,-25z" fill="#f1c232"/>
+       <path id="svg_123" stroke-width="2" stroke-miterlimit="10" d="m25,0m0,0l35,0c13.80712,0 25,11.19288 25,25c0,13.80712 -11.19288,25 -25,25l-35,0c-13.80712,0 -25,-11.19288 -25,-25c0,-13.80712 11.19288,-25 25,-25z" stroke="#333333" fill="none"/>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+  <g id="svg_124" transform="matrix(-1.8369701987210297e-16,-1,1,-1.8369701987210297e-16,51,220) ">
+   <g id="svg_125" transform="translate(-70,0) ">
+    <g id="svg_126">
+     <rect id="svg_127" fill-opacity="0" height="18" width="67" y="0" x="70" fill="rgb(0,0,0)"/>
+    </g>
+   </g>
+   <g id="svg_128" transform="translate(-70,0) ">
+    <g id="svg_129">
+     <rect id="svg_130" fill-opacity="0" height="18" width="67" y="0" x="70" fill="rgb(0,0,0)"/>
+    </g>
+   </g>
+   <g id="svg_131" transform="translate(-70,0) ">
+    <g id="svg_132">
+     <rect id="svg_133" fill-opacity="0" height="14" width="59" y="0" x="74" fill="rgb(0,0,0)"/>
+    </g>
+   </g>
+   <g id="svg_134" transform="translate(-70,0) ">
+    <g id="svg_135">
+     <rect id="svg_136" fill-opacity="0" height="14" width="59" y="0" x="74" fill="rgb(0,0,0)"/>
+    </g>
+   </g>
+   <g id="svg_137" transform="translate(-70,0) ">
+    <g id="svg_138">
+     <rect id="svg_139" fill-opacity="0" height="17" width="54" y="0" x="74" fill="rgb(0,0,0)"/>
+    </g>
+    <text id="svg_140" y="14" x="74" font-weight="bold" font-style="normal" font-size="16px" font-family="Arial" fill="rgb(0, 0, 0)">Docker</text>
+   </g>
+   <g id="svg_141" transform="translate(-70,0) ">
+    <g id="svg_142">
+     <rect id="svg_143" fill-opacity="0" height="17" width="5" y="0" x="128" fill="rgb(0,0,0)"/>
+    </g>
+   </g>
+  </g>
+  <g id="svg_144" transform="matrix(1,0,0,1,25,250) ">
+   <g id="svg_145">
+    <g id="svg_146" transform="translate(0,0) scale(5.199999809265137,0.4000000059604645) ">
+     <g id="svg_147">
+      <g id="svg_148" transform="scale(0.19230769574642181,2.5) ">
+       <path id="svg_149" d="m20,0l480,0c11.04569,0 20,8.95431 20,20c0,11.04569 -8.95431,20 -20,20l-480,0c-11.04569,0 -20,-8.95431 -20,-20c0,-11.04569 8.95431,-20 20,-20z" fill="#6aa84f"/>
+       <path id="svg_150" stroke-width="2" stroke-miterlimit="10" d="m20,0m0,0l480,0c11.04569,0 20,8.95431 20,20c0,11.04569 -8.95431,20 -20,20l-480,0c-11.04569,0 -20,-8.95431 -20,-20c0,-11.04569 8.95431,-20 20,-20z" stroke="#333333" fill="none"/>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+  <g id="svg_151" transform="matrix(1,0,0,1,36,261) ">
+   <g id="svg_152" transform="translate(-394,0) ">
+    <g id="svg_153">
+     <rect id="svg_154" fill-opacity="0" height="18" width="498" y="0" x="394" fill="rgb(0,0,0)"/>
+    </g>
+   </g>
+   <g id="svg_155" transform="translate(-394,0) ">
+    <g id="svg_156">
+     <rect id="svg_157" fill-opacity="0" height="18" width="498" y="0" x="394" fill="rgb(0,0,0)"/>
+    </g>
+   </g>
+   <g id="svg_158" transform="translate(-394,0) ">
+    <g id="svg_159">
+     <rect id="svg_160" fill-opacity="0" height="17" width="104" y="0" x="591" fill="rgb(0,0,0)"/>
+    </g>
+   </g>
+   <g id="svg_161" transform="translate(-394,0) ">
+    <g id="svg_162">
+     <rect id="svg_163" fill-opacity="0" height="17" width="104" y="0" x="591" fill="rgb(0,0,0)"/>
+    </g>
+    <text id="svg_164" y="14" x="645" font-weight="bold" font-style="normal" font-size="16px" font-family="Arial" fill="rgb(0, 0, 0)">Kernel</text>
+   </g>
+  </g>
+  <g id="svg_165" transform="matrix(1,0,0,1,95,160.00000000000003) ">
+   <g id="svg_166">
+    <g id="svg_167" transform="translate(0,0) scale(4.5,0.800000011920929) ">
+     <g id="svg_168">
+      <g id="svg_169" transform="scale(0.2222222238779068,1.25) ">
+       <path id="svg_170" d="m40,0l370,0c22.09139,0 40,17.90861 40,40c0,22.09139 -17.90861,40 -40,40l-370,0c-22.09139,0 -40,-17.90861 -40,-40c0,-22.09139 17.90861,-40 40,-40z" fill="#e06666"/>
+       <path id="svg_171" stroke-width="2" stroke-miterlimit="10" d="m40,0m0,0l370,0c22.09139,0 40,17.90861 40,40c0,22.09139 -17.90861,40 -40,40l-370,0c-22.09139,0 -40,-17.90861 -40,-40c0,-22.09139 17.90861,-40 40,-40z" stroke="#333333" fill="none"/>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+  <g id="svg_172" transform="matrix(1,0,0,1,106,191) ">
+   <g id="svg_173" transform="translate(-362,0) ">
+    <g id="svg_174">
+     <rect id="svg_175" fill-opacity="0" height="18" width="429" y="0" x="362" fill="rgb(0,0,0)"/>
+    </g>
+   </g>
+   <g id="svg_176" transform="translate(-362,0) ">
+    <g id="svg_177">
+     <rect id="svg_178" fill-opacity="0" height="18" width="429" y="0" x="362" fill="rgb(0,0,0)"/>
+    </g>
+   </g>
+   <g id="svg_179" transform="translate(-362,0) ">
+    <g id="svg_180">
+     <rect id="svg_181" fill-opacity="0" height="17" width="67" y="0" x="543" fill="rgb(0,0,0)"/>
+    </g>
+   </g>
+   <g id="svg_182" transform="translate(-362,0) ">
+    <g id="svg_183">
+     <rect id="svg_184" fill-opacity="0" height="17" width="67" y="0" x="543" fill="rgb(0,0,0)"/>
+    </g>
+    <text id="svg_185" y="14" x="543" font-weight="bold" font-style="normal" font-size="16px" font-family="Arial" fill="rgb(0, 0, 0)">Libraries</text>
+   </g>
+  </g>
+  <g id="svg_186" transform="matrix(1,0,0,1,145,240) ">
+   <g id="svg_187" transform="translate(4,4) scale(1.0090909004211426,1.0333333015441895) ">
+    <g id="svg_188">
+     <g id="svg_189" transform="translate(0,0) scale(1.100000023841858,0.30000001192092896) ">
+      <g id="svg_190">
+       <path id="svg_191" opacity="0.294118" d="m0,0l100,0q0,0 0,0l0,100q0,0 0,0l-100,0q0,0 0,0l0,-100q0,0 0,0z" fill="#000000"/>
+       <g id="svg_192" transform="scale(0.9090909361839294,3.3333332538604736) ">
+        <path id="svg_193" d="m0,0l110,0q0,0 0,0l0,30q0,0 0,0l-110,0q0,0 0,0l0,-30q0,0 0,0z" fill="none"/>
+        <path id="svg_194" opacity="0.294118" stroke-width="2" stroke-miterlimit="10" stroke-opacity="0" d="m0,0m0,0l110,0q0,0 0,0l0,30q0,0 0,0l-110,0q0,0 0,0l0,-30q0,0 0,0z" stroke="rgb(0,0,0)" fill="none"/>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+   <g id="svg_195">
+    <g id="svg_196" transform="translate(0,0) scale(1.100000023841858,0.30000001192092896) ">
+     <g id="svg_197">
+      <path id="svg_198" d="m0,0l100,0q0,0 0,0l0,100q0,0 0,0l-100,0q0,0 0,0l0,-100q0,0 0,0z" fill="url(#MysqWQvpwMWT)"/>
+      <g id="svg_199" transform="scale(0.9090909361839294,3.3333332538604736) ">
+       <path id="svg_200" d="m0,0l110,0q0,0 0,0l0,30q0,0 0,0l-110,0q0,0 0,0l0,-30q0,0 0,0z" fill="none"/>
+       <path id="svg_201" stroke-width="2" stroke-miterlimit="10" d="m0,0m0,0l110,0q0,0 0,0l0,30q0,0 0,0l-110,0q0,0 0,0l0,-30q0,0 0,0z" stroke="#333333" fill="url(#MysqWQvpwMWT)"/>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+  <g id="svg_202" transform="matrix(1,0,0,1,145,210.00000000000003) ">
+   <g id="svg_203" transform="translate(4,4) scale(1.0090909004211426,1.0333333015441895) ">
+    <g id="svg_204">
+     <g id="svg_205" transform="translate(0,0) scale(1.100000023841858,0.30000001192092896) ">
+      <g id="svg_206">
+       <path id="svg_207" opacity="0.294118" d="m0,0l100,0q0,0 0,0l0,100q0,0 0,0l-100,0q0,0 0,0l0,-100q0,0 0,0z" fill="#000000"/>
+       <g id="svg_208" transform="scale(0.9090909361839294,3.3333332538604736) ">
+        <path id="svg_209" d="m0,0l110,0q0,0 0,0l0,30q0,0 0,0l-110,0q0,0 0,0l0,-30q0,0 0,0z" fill="none"/>
+        <path id="svg_210" opacity="0.294118" stroke-width="2" stroke-miterlimit="10" stroke-opacity="0" d="m0,0m0,0l110,0q0,0 0,0l0,30q0,0 0,0l-110,0q0,0 0,0l0,-30q0,0 0,0z" stroke="rgb(0,0,0)" fill="none"/>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+   <g id="svg_211">
+    <g id="svg_212" transform="translate(0,0) scale(1.100000023841858,0.30000001192092896) ">
+     <g id="svg_213">
+      <path id="svg_214" d="m0,0l100,0q0,0 0,0l0,100q0,0 0,0l-100,0q0,0 0,0l0,-100q0,0 0,0z" fill="url(#yNTDirRZiyEe)"/>
+      <g id="svg_215" transform="scale(0.9090909361839294,3.3333332538604736) ">
+       <path id="svg_216" d="m0,0l110,0q0,0 0,0l0,30q0,0 0,0l-110,0q0,0 0,0l0,-30q0,0 0,0z" fill="none"/>
+       <path id="svg_217" stroke-width="2" stroke-miterlimit="10" d="m0,0m0,0l110,0q0,0 0,0l0,30q0,0 0,0l-110,0q0,0 0,0l0,-30q0,0 0,0z" stroke="#333333" fill="url(#yNTDirRZiyEe)"/>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+  <g id="svg_218" transform="matrix(1,0,0,1,145,180.00000000000003) ">
+   <g id="svg_219" transform="translate(4,4) scale(1.0090909004211426,1.0333333015441895) ">
+    <g id="svg_220">
+     <g id="svg_221" transform="translate(0,0) scale(1.100000023841858,0.30000001192092896) ">
+      <g id="svg_222">
+       <path id="svg_223" opacity="0.294118" d="m0,0l100,0q0,0 0,0l0,100q0,0 0,0l-100,0q0,0 0,0l0,-100q0,0 0,0z" fill="#000000"/>
+       <g id="svg_224" transform="scale(0.9090909361839294,3.3333332538604736) ">
+        <path id="svg_225" d="m0,0l110,0q0,0 0,0l0,30q0,0 0,0l-110,0q0,0 0,0l0,-30q0,0 0,0z" fill="none"/>
+        <path id="svg_226" opacity="0.294118" stroke-width="2" stroke-miterlimit="10" stroke-opacity="0" d="m0,0m0,0l110,0q0,0 0,0l0,30q0,0 0,0l-110,0q0,0 0,0l0,-30q0,0 0,0z" stroke="rgb(0,0,0)" fill="none"/>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+   <g id="svg_227">
+    <g id="svg_228" transform="translate(0,0) scale(1.100000023841858,0.30000001192092896) ">
+     <g id="svg_229">
+      <path id="svg_230" d="m0,0l100,0q0,0 0,0l0,100q0,0 0,0l-100,0q0,0 0,0l0,-100q0,0 0,0z" fill="url(#NESPCJUhOleP)"/>
+      <g id="svg_231" transform="scale(0.9090909361839294,3.3333332538604736) ">
+       <path id="svg_232" d="m0,0l110,0q0,0 0,0l0,30q0,0 0,0l-110,0q0,0 0,0l0,-30q0,0 0,0z" fill="none"/>
+       <path id="svg_233" stroke-width="2" stroke-miterlimit="10" d="m0,0m0,0l110,0q0,0 0,0l0,30q0,0 0,0l-110,0q0,0 0,0l0,-30q0,0 0,0z" stroke="#333333" fill="url(#NESPCJUhOleP)"/>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+  <g id="svg_234" transform="matrix(1,0,0,1,145,150.00000000000003) ">
+   <g id="svg_235" transform="translate(4,4) scale(1.0090909004211426,1.0333333015441895) ">
+    <g id="svg_236">
+     <g id="svg_237" transform="translate(0,0) scale(1.100000023841858,0.30000001192092896) ">
+      <g id="svg_238">
+       <path id="svg_239" opacity="0.294118" d="m0,0l100,0q0,0 0,0l0,100q0,0 0,0l-100,0q0,0 0,0l0,-100q0,0 0,0z" fill="#000000"/>
+       <g id="svg_240" transform="scale(0.9090909361839294,3.3333332538604736) ">
+        <path id="svg_241" d="m0,0l110,0q0,0 0,0l0,30q0,0 0,0l-110,0q0,0 0,0l0,-30q0,0 0,0z" fill="none"/>
+        <path id="svg_242" opacity="0.294118" stroke-width="2" stroke-miterlimit="10" stroke-opacity="0" d="m0,0m0,0l110,0q0,0 0,0l0,30q0,0 0,0l-110,0q0,0 0,0l0,-30q0,0 0,0z" stroke="rgb(0,0,0)" fill="none"/>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+   <g id="svg_243">
+    <g id="svg_244" transform="translate(0,0) scale(1.100000023841858,0.30000001192092896) ">
+     <g id="svg_245">
+      <path id="svg_246" d="m0,0l100,0q0,0 0,0l0,100q0,0 0,0l-100,0q0,0 0,0l0,-100q0,0 0,0z" fill="url(#nqcwAArAtphQ)"/>
+      <g id="svg_247" transform="scale(0.9090909361839294,3.3333332538604736) ">
+       <path id="svg_248" d="m0,0l110,0q0,0 0,0l0,30q0,0 0,0l-110,0q0,0 0,0l0,-30q0,0 0,0z" fill="none"/>
+       <path id="svg_249" stroke-width="2" stroke-miterlimit="10" d="m0,0m0,0l110,0q0,0 0,0l0,30q0,0 0,0l-110,0q0,0 0,0l0,-30q0,0 0,0z" stroke="#333333" fill="url(#nqcwAArAtphQ)"/>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+  <g id="svg_250" transform="matrix(1,0,0,1,145,120.00000000000003) ">
+   <g id="svg_251" transform="translate(4,4) scale(1.0090909004211426,1.0333333015441895) ">
+    <g id="svg_252">
+     <g id="svg_253" transform="translate(0,0) scale(1.100000023841858,0.30000001192092896) ">
+      <g id="svg_254">
+       <path id="svg_255" opacity="0.294118" d="m0,0l100,0q0,0 0,0l0,100q0,0 0,0l-100,0q0,0 0,0l0,-100q0,0 0,0z" fill="#000000"/>
+       <g id="svg_256" transform="scale(0.9090909361839294,3.3333332538604736) ">
+        <path id="svg_257" d="m0,0l110,0q0,0 0,0l0,30q0,0 0,0l-110,0q0,0 0,0l0,-30q0,0 0,0z" fill="none"/>
+        <path id="svg_258" opacity="0.294118" stroke-width="2" stroke-miterlimit="10" stroke-opacity="0" d="m0,0m0,0l110,0q0,0 0,0l0,30q0,0 0,0l-110,0q0,0 0,0l0,-30q0,0 0,0z" stroke="rgb(0,0,0)" fill="none"/>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+   <g id="svg_259">
+    <g id="svg_260" transform="translate(0,0) scale(1.100000023841858,0.30000001192092896) ">
+     <g id="svg_261">
+      <path id="svg_262" d="m0,0l100,0q0,0 0,0l0,100q0,0 0,0l-100,0q0,0 0,0l0,-100q0,0 0,0z" fill="url(#CCHoRvgIvWfF)"/>
+      <g id="svg_263" transform="scale(0.9090909361839294,3.3333332538604736) ">
+       <path id="svg_264" d="m0,0l110,0q0,0 0,0l0,30q0,0 0,0l-110,0q0,0 0,0l0,-30q0,0 0,0z" fill="none"/>
+       <path id="svg_265" stroke-width="2" stroke-miterlimit="10" d="m0,0m0,0l110,0q0,0 0,0l0,30q0,0 0,0l-110,0q0,0 0,0l0,-30q0,0 0,0z" stroke="#333333" fill="url(#CCHoRvgIvWfF)"/>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+  <g id="svg_266" transform="matrix(1,0,0,1,145,65.00000000000009) ">
+   <g id="svg_267">
+    <g id="svg_268" transform="translate(0,0) scale(1.100000023841858,0.550000011920929) ">
+     <g id="svg_269">
+      <path id="svg_270" d="m0,0l100,0q0,0 0,0l0,100q0,0 0,0l-100,0q0,0 0,0l0,-100q0,0 0,0z" fill="#FFFFFF"/>
+      <g id="svg_271" transform="scale(0.9090909361839294,1.8181818723678589) ">
+       <path id="svg_272" d="m0,0l110,0q0,0 0,0l0,55q0,0 0,0l-110,0q0,0 0,0l0,-55q0,0 0,0z" fill="none"/>
+       <path id="svg_273" stroke-width="2" stroke-miterlimit="10" d="m0,0m0,0l8,0m0,0m8,0l8,0m0,0m8,0l8,0m0,0m8,0l8,0m0,0m8,0l8,0m0,0m8,0l8,0m0,0m8,0l8,0m0,0m6,2l0,8m0,0m0,8l0,8m0,0m0,8l0,8m0,0m0,8l0,5q0,0 0,0l-3,0m0,0m-8,0l-8,0m0,0m-8,0l-8,0m0,0m-8,0l-8,0m0,0m-8,0l-8,0m0,0m-8,0l-8,0m0,0m-8,0l-8,0m0,0m-8,0l-3,0q0,0 0,0l0,-5m0,0m0,-8l0,-8m0,0m0,-8l0,-8m0,0m0,-8l0,-8m0,0z" stroke="#333333" fill="none"/>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+  <g id="svg_274" transform="matrix(1,0,0,1,395,235) ">
+   <g id="svg_275" transform="translate(4,4) scale(1.0090909004211426,1.0333333015441895) ">
+    <g id="svg_276">
+     <g id="svg_277" transform="translate(0,0) scale(1.100000023841858,0.30000001192092896) ">
+      <g id="svg_278">
+       <path id="svg_279" opacity="0.294118" d="m0,0l100,0q0,0 0,0l0,100q0,0 0,0l-100,0q0,0 0,0l0,-100q0,0 0,0z" fill="#000000"/>
+       <g id="svg_280" transform="scale(0.9090909361839294,3.3333332538604736) ">
+        <path id="svg_281" d="m0,0l110,0q0,0 0,0l0,30q0,0 0,0l-110,0q0,0 0,0l0,-30q0,0 0,0z" fill="none"/>
+        <path id="svg_282" opacity="0.294118" stroke-width="2" stroke-miterlimit="10" stroke-opacity="0" d="m0,0m0,0l110,0q0,0 0,0l0,30q0,0 0,0l-110,0q0,0 0,0l0,-30q0,0 0,0z" stroke="rgb(0,0,0)" fill="none"/>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+   <g id="svg_283">
+    <g id="svg_284" transform="translate(0,0) scale(1.100000023841858,0.30000001192092896) ">
+     <g id="svg_285">
+      <path id="svg_286" d="m0,0l100,0q0,0 0,0l0,100q0,0 0,0l-100,0q0,0 0,0l0,-100q0,0 0,0z" fill="url(#TPNvILqDctGV)"/>
+      <g id="svg_287" transform="scale(0.9090909361839294,3.3333332538604736) ">
+       <path id="svg_288" d="m0,0l110,0q0,0 0,0l0,30q0,0 0,0l-110,0q0,0 0,0l0,-30q0,0 0,0z" fill="none"/>
+       <path id="svg_289" stroke-width="2" stroke-miterlimit="10" d="m0,0m0,0l110,0q0,0 0,0l0,30q0,0 0,0l-110,0q0,0 0,0l0,-30q0,0 0,0z" stroke="#333333" fill="url(#TPNvILqDctGV)"/>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+  <g id="svg_290" transform="matrix(1,0,0,1,395,205.00000000000003) ">
+   <g id="svg_291" transform="translate(4,4) scale(1.0090909004211426,1.0333333015441895) ">
+    <g id="svg_292">
+     <g id="svg_293" transform="translate(0,0) scale(1.100000023841858,0.30000001192092896) ">
+      <g id="svg_294">
+       <path id="svg_295" opacity="0.294118" d="m0,0l100,0q0,0 0,0l0,100q0,0 0,0l-100,0q0,0 0,0l0,-100q0,0 0,0z" fill="#000000"/>
+       <g id="svg_296" transform="scale(0.9090909361839294,3.3333332538604736) ">
+        <path id="svg_297" d="m0,0l110,0q0,0 0,0l0,30q0,0 0,0l-110,0q0,0 0,0l0,-30q0,0 0,0z" fill="none"/>
+        <path id="svg_298" opacity="0.294118" stroke-width="2" stroke-miterlimit="10" stroke-opacity="0" d="m0,0m0,0l110,0q0,0 0,0l0,30q0,0 0,0l-110,0q0,0 0,0l0,-30q0,0 0,0z" stroke="rgb(0,0,0)" fill="none"/>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+   <g id="svg_299">
+    <g id="svg_300" transform="translate(0,0) scale(1.100000023841858,0.30000001192092896) ">
+     <g id="svg_301">
+      <path id="svg_302" d="m0,0l100,0q0,0 0,0l0,100q0,0 0,0l-100,0q0,0 0,0l0,-100q0,0 0,0z" fill="url(#UQnTNWCJTevx)"/>
+      <g id="svg_303" transform="scale(0.9090909361839294,3.3333332538604736) ">
+       <path id="svg_304" d="m0,0l110,0q0,0 0,0l0,30q0,0 0,0l-110,0q0,0 0,0l0,-30q0,0 0,0z" fill="none"/>
+       <path id="svg_305" stroke-width="2" stroke-miterlimit="10" d="m0,0m0,0l110,0q0,0 0,0l0,30q0,0 0,0l-110,0q0,0 0,0l0,-30q0,0 0,0z" stroke="#333333" fill="url(#UQnTNWCJTevx)"/>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+  <g id="svg_306" transform="matrix(1,0,0,1,395,175.00000000000003) ">
+   <g id="svg_307" transform="translate(4,4) scale(1.0090909004211426,1.0333333015441895) ">
+    <g id="svg_308">
+     <g id="svg_309" transform="translate(0,0) scale(1.100000023841858,0.30000001192092896) ">
+      <g id="svg_310">
+       <path id="svg_311" opacity="0.294118" d="m0,0l100,0q0,0 0,0l0,100q0,0 0,0l-100,0q0,0 0,0l0,-100q0,0 0,0z" fill="#000000"/>
+       <g id="svg_312" transform="scale(0.9090909361839294,3.3333332538604736) ">
+        <path id="svg_313" d="m0,0l110,0q0,0 0,0l0,30q0,0 0,0l-110,0q0,0 0,0l0,-30q0,0 0,0z" fill="none"/>
+        <path id="svg_314" opacity="0.294118" stroke-width="2" stroke-miterlimit="10" stroke-opacity="0" d="m0,0m0,0l110,0q0,0 0,0l0,30q0,0 0,0l-110,0q0,0 0,0l0,-30q0,0 0,0z" stroke="rgb(0,0,0)" fill="none"/>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+   <g id="svg_315">
+    <g id="svg_316" transform="translate(0,0) scale(1.100000023841858,0.30000001192092896) ">
+     <g id="svg_317">
+      <path id="svg_318" d="m0,0l100,0q0,0 0,0l0,100q0,0 0,0l-100,0q0,0 0,0l0,-100q0,0 0,0z" fill="url(#MsUSCoIguXJZ)"/>
+      <g id="svg_319" transform="scale(0.9090909361839294,3.3333332538604736) ">
+       <path id="svg_320" d="m0,0l110,0q0,0 0,0l0,30q0,0 0,0l-110,0q0,0 0,0l0,-30q0,0 0,0z" fill="none"/>
+       <path id="svg_321" stroke-width="2" stroke-miterlimit="10" d="m0,0m0,0l110,0q0,0 0,0l0,30q0,0 0,0l-110,0q0,0 0,0l0,-30q0,0 0,0z" stroke="#333333" fill="url(#MsUSCoIguXJZ)"/>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+  <g id="svg_322" transform="matrix(1,0,0,1,395,145.00000000000003) ">
+   <g id="svg_323" transform="translate(4,4) scale(1.0090909004211426,1.0333333015441895) ">
+    <g id="svg_324">
+     <g id="svg_325" transform="translate(0,0) scale(1.100000023841858,0.30000001192092896) ">
+      <g id="svg_326">
+       <path id="svg_327" opacity="0.294118" d="m0,0l100,0q0,0 0,0l0,100q0,0 0,0l-100,0q0,0 0,0l0,-100q0,0 0,0z" fill="#000000"/>
+       <g id="svg_328" transform="scale(0.9090909361839294,3.3333332538604736) ">
+        <path id="svg_329" d="m0,0l110,0q0,0 0,0l0,30q0,0 0,0l-110,0q0,0 0,0l0,-30q0,0 0,0z" fill="none"/>
+        <path id="svg_330" opacity="0.294118" stroke-width="2" stroke-miterlimit="10" stroke-opacity="0" d="m0,0m0,0l110,0q0,0 0,0l0,30q0,0 0,0l-110,0q0,0 0,0l0,-30q0,0 0,0z" stroke="rgb(0,0,0)" fill="none"/>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+   <g id="svg_331">
+    <g id="svg_332" transform="translate(0,0) scale(1.100000023841858,0.30000001192092896) ">
+     <g id="svg_333">
+      <path id="svg_334" d="m0,0l100,0q0,0 0,0l0,100q0,0 0,0l-100,0q0,0 0,0l0,-100q0,0 0,0z" fill="url(#UoLEdWJNgGdq)"/>
+      <g id="svg_335" transform="scale(0.9090909361839294,3.3333332538604736) ">
+       <path id="svg_336" d="m0,0l110,0q0,0 0,0l0,30q0,0 0,0l-110,0q0,0 0,0l0,-30q0,0 0,0z" fill="none"/>
+       <path id="svg_337" stroke-width="2" stroke-miterlimit="10" d="m0,0m0,0l110,0q0,0 0,0l0,30q0,0 0,0l-110,0q0,0 0,0l0,-30q0,0 0,0z" stroke="#333333" fill="url(#UoLEdWJNgGdq)"/>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+  <g id="svg_338" transform="matrix(1,0,0,1,395,115.00000000000003) ">
+   <g id="svg_339" transform="translate(4,4) scale(1.0090909004211426,1.0333333015441895) ">
+    <g id="svg_340">
+     <g id="svg_341" transform="translate(0,0) scale(1.100000023841858,0.30000001192092896) ">
+      <g id="svg_342">
+       <path id="svg_343" opacity="0.294118" d="m0,0l100,0q0,0 0,0l0,100q0,0 0,0l-100,0q0,0 0,0l0,-100q0,0 0,0z" fill="#000000"/>
+       <g id="svg_344" transform="scale(0.9090909361839294,3.3333332538604736) ">
+        <path id="svg_345" d="m0,0l110,0q0,0 0,0l0,30q0,0 0,0l-110,0q0,0 0,0l0,-30q0,0 0,0z" fill="none"/>
+        <path id="svg_346" opacity="0.294118" stroke-width="2" stroke-miterlimit="10" stroke-opacity="0" d="m0,0m0,0l110,0q0,0 0,0l0,30q0,0 0,0l-110,0q0,0 0,0l0,-30q0,0 0,0z" stroke="rgb(0,0,0)" fill="none"/>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+   <g id="svg_347">
+    <g id="svg_348" transform="translate(0,0) scale(1.100000023841858,0.30000001192092896) ">
+     <g id="svg_349">
+      <path id="svg_350" d="m0,0l100,0q0,0 0,0l0,100q0,0 0,0l-100,0q0,0 0,0l0,-100q0,0 0,0z" fill="url(#MXUgcztiXraK)"/>
+      <g id="svg_351" transform="scale(0.9090909361839294,3.3333332538604736) ">
+       <path id="svg_352" d="m0,0l110,0q0,0 0,0l0,30q0,0 0,0l-110,0q0,0 0,0l0,-30q0,0 0,0z" fill="none"/>
+       <path id="svg_353" stroke-width="2" stroke-miterlimit="10" d="m0,0m0,0l110,0q0,0 0,0l0,30q0,0 0,0l-110,0q0,0 0,0l0,-30q0,0 0,0z" stroke="#333333" fill="url(#MXUgcztiXraK)"/>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+  <g id="svg_354" transform="matrix(1,0,0,1,395,60.000000000000085) ">
+   <g id="svg_355">
+    <g id="svg_356" transform="translate(0,0) scale(1.100000023841858,0.550000011920929) ">
+     <g id="svg_357">
+      <path id="svg_358" d="m0,0l100,0q0,0 0,0l0,100q0,0 0,0l-100,0q0,0 0,0l0,-100q0,0 0,0z" fill="#FFFFFF"/>
+      <g id="svg_359" transform="scale(0.9090909361839294,1.8181818723678589) ">
+       <path id="svg_360" d="m0,0l110,0q0,0 0,0l0,55q0,0 0,0l-110,0q0,0 0,0l0,-55q0,0 0,0z" fill="none"/>
+       <path id="svg_361" stroke-width="2" stroke-miterlimit="10" d="m0,0m0,0l8,0m0,0m8,0l8,0m0,0m8,0l8,0m0,0m8,0l8,0m0,0m8,0l8,0m0,0m8,0l8,0m0,0m8,0l8,0m0,0m6,2l0,8m0,0m0,8l0,8m0,0m0,8l0,8m0,0m0,8l0,5q0,0 0,0l-3,0m0,0m-8,0l-8,0m0,0m-8,0l-8,0m0,0m-8,0l-8,0m0,0m-8,0l-8,0m0,0m-8,0l-8,0m0,0m-8,0l-8,0m0,0m-8,0l-3,0q0,0 0,0l0,-5m0,0m0,-8l0,-8m0,0m0,-8l0,-8m0,0m0,-8l0,-8m0,0z" stroke="#333333" fill="none"/>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+ </g>
+</svg>

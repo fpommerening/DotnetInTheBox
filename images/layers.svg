@@ -1,0 +1,288 @@
+<?xml version="1.0"?>
+<svg width="274.19999999999993" height="425" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" xmlns:html="http://www.w3.org/1999/xhtml">
+ <STYLE xmlns="http://www.w3.org/1999/xhtml"/>
+ <defs>
+  <linearGradient y2="NaN" y1="NaN" x2="NaN" x1="NaN" id="LzSUkgaAzveV">
+   <stop stop-color="#6aa84f" offset="0"/>
+   <stop stop-color="#FFFFFF" offset="1"/>
+  </linearGradient>
+  <linearGradient y2="NaN" y1="NaN" x2="NaN" x1="NaN" id="cUpJggXlFBiJ">
+   <stop stop-color="#3d85c6" offset="0"/>
+   <stop stop-color="#FFFFFF" offset="1"/>
+  </linearGradient>
+  <linearGradient y2="NaN" y1="NaN" x2="NaN" x1="NaN" id="wRUowpCWPLyU">
+   <stop stop-color="#f1c232" offset="0"/>
+   <stop stop-color="#FFFFFF" offset="1"/>
+  </linearGradient>
+  <linearGradient y2="NaN" y1="NaN" x2="NaN" x1="NaN" id="BgeIsfukFsIy">
+   <stop stop-color="#e06666" offset="0"/>
+   <stop stop-color="#FFFFFF" offset="1"/>
+  </linearGradient>
+  <linearGradient y2="NaN" y1="NaN" x2="NaN" x1="NaN" id="CTFMySIeehdd">
+   <stop stop-color="#8e7cc3" offset="0"/>
+   <stop stop-color="#FFFFFF" offset="1"/>
+  </linearGradient>
+ </defs>
+ <g>
+  <title>Layer 1</title>
+  <g id="svg_4" transform="matrix(1,0,0,1,60,330) ">
+   <g id="svg_5" transform="translate(4,4) scale(1.0052632093429565,1.0133333206176758) ">
+    <g id="svg_6">
+     <g id="svg_7" transform="translate(0,0) scale(1.899999976158142,0.75) ">
+      <g id="svg_8">
+       <path id="svg_9" opacity="0.294118" d="m-10.994751,-5.263157l100,0q0,0 0,0l0,100q0,0 0,0l-100,0q0,0 0,0l0,-100q0,0 0,0z" fill="#000000"/>
+       <g id="svg_10" transform="translate(129.31936645507812,-17.105262756347656) scale(0.5263158082962036,1.3333333730697632) ">
+        <path id="svg_11" d="m-266.596802,8.881579l190,0q0,0 0,0l0,75q0,0 0,0l-190,0q0,0 0,0l0,-75q0,0 0,0z" fill="none"/>
+        <path id="svg_12" opacity="0.294118" stroke-width="2" stroke-miterlimit="10" stroke-opacity="0" d="m-266.596802,8.881579m0,0l190,0q0,0 0,0l0,75q0,0 0,0l-190,0q0,0 0,0l0,-75q0,0 0,0z" stroke="rgb(0,0,0)" fill="none"/>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+   <g id="svg_13">
+    <g id="svg_14" transform="translate(0,0) scale(1.899999976158142,0.75) ">
+     <g id="svg_15">
+      <path id="svg_16" d="m-11.052628,-5.333334l100,0q0,0 0,0l0,100q0,0 0,0l-100,0q0,0 0,0l0,-100q0,0 0,0z" fill="url(#LzSUkgaAzveV)"/>
+      <g id="svg_17" transform="translate(130,-17.33333396911621) scale(0.5263158082962036,1.3333333730697632) ">
+       <path id="svg_18" d="m-267.999969,9l190,0q0,0 0,0l0,75q0,0 0,0l-190,0q0,0 0,0l0,-75q0,0 0,0z" fill="none"/>
+       <path id="svg_19" stroke-width="2" stroke-miterlimit="10" d="m-267.999969,9m0,0l190,0q0,0 0,0l0,75q0,0 0,0l-190,0q0,0 0,0l0,-75q0,0 0,0z" stroke="#333333" fill="url(#LzSUkgaAzveV)"/>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+  <g id="svg_20" transform="matrix(1,0,0,1,72,358) ">
+   <g id="svg_21" transform="translate(-112,0) ">
+    <g id="svg_22">
+     <rect id="svg_23" fill-opacity="0" height="20" width="167" y="-4" x="91" fill="rgb(0,0,0)"/>
+    </g>
+   </g>
+   <g id="svg_24" transform="translate(-112,0) ">
+    <g id="svg_25">
+     <rect id="svg_26" fill-opacity="0" height="20" width="167" y="-4" x="91" fill="rgb(0,0,0)"/>
+    </g>
+   </g>
+   <g id="svg_27" transform="translate(-112,0) ">
+    <g id="svg_28">
+     <rect id="svg_29" fill-opacity="0" height="20" width="56" y="-4" x="147" fill="rgb(0,0,0)"/>
+    </g>
+   </g>
+   <g id="svg_30" transform="translate(-112,0) ">
+    <g id="svg_31">
+     <rect id="svg_32" fill-opacity="0" height="20" width="56" y="-4" x="147" fill="rgb(0,0,0)"/>
+    </g>
+    <text id="svg_33" y="12" x="147" font-weight="bold" font-style="normal" font-size="18px" font-family="Arial" fill="rgb(0, 0, 0)">Kernel</text>
+   </g>
+  </g>
+  <g id="svg_34" transform="matrix(1,0,0,1,60,255) ">
+   <g id="svg_35" transform="translate(4,4) scale(1.0052632093429565,1.0133333206176758) ">
+    <g id="svg_36">
+     <g id="svg_37" transform="translate(0,0) scale(1.899999976158142,0.75) ">
+      <g id="svg_38">
+       <path id="svg_39" opacity="0.294118" d="m-10.994751,-5.263157l100,0q0,0 0,0l0,100q0,0 0,0l-100,0q0,0 0,0l0,-100q0,0 0,0z" fill="#000000"/>
+       <g id="svg_40" transform="translate(129.31936645507812,-17.105262756347656) scale(0.5263158082962036,1.3333333730697632) ">
+        <path id="svg_41" d="m-266.596802,8.881579l190,0q0,0 0,0l0,75q0,0 0,0l-190,0q0,0 0,0l0,-75q0,0 0,0z" fill="none"/>
+        <path id="svg_42" opacity="0.294118" stroke-width="2" stroke-miterlimit="10" stroke-opacity="0" d="m-266.596802,8.881579m0,0l190,0q0,0 0,0l0,75q0,0 0,0l-190,0q0,0 0,0l0,-75q0,0 0,0z" stroke="rgb(0,0,0)" fill="none"/>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+   <g id="svg_43">
+    <g id="svg_44" transform="translate(0,0) scale(1.899999976158142,0.75) ">
+     <g id="svg_45">
+      <path id="svg_46" d="m-11.052628,-5.333334l100,0q0,0 0,0l0,100q0,0 0,0l-100,0q0,0 0,0l0,-100q0,0 0,0z" fill="url(#cUpJggXlFBiJ)"/>
+      <g id="svg_47" transform="translate(130,-17.33333396911621) scale(0.5263158082962036,1.3333333730697632) ">
+       <path id="svg_48" d="m-267.999969,9l190,0q0,0 0,0l0,75q0,0 0,0l-190,0q0,0 0,0l0,-75q0,0 0,0z" fill="none"/>
+       <path id="svg_49" stroke-width="2" stroke-miterlimit="10" d="m-267.999969,9m0,0l190,0q0,0 0,0l0,75q0,0 0,0l-190,0q0,0 0,0l0,-75q0,0 0,0z" stroke="#333333" fill="url(#cUpJggXlFBiJ)"/>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+  <g id="svg_50" transform="matrix(1,0,0,1,72,283) ">
+   <g id="svg_51" transform="translate(-108,0) ">
+    <g id="svg_52">
+     <rect id="svg_53" fill-opacity="0" height="20" width="167" y="-4" x="87" fill="rgb(0,0,0)"/>
+    </g>
+   </g>
+   <g id="svg_54" transform="translate(-108,0) ">
+    <g id="svg_55">
+     <rect id="svg_56" fill-opacity="0" height="20" width="167" y="-4" x="87" fill="rgb(0,0,0)"/>
+    </g>
+   </g>
+   <g id="svg_57" transform="translate(-108,0) ">
+    <g id="svg_58">
+     <rect id="svg_59" fill-opacity="0" height="20" width="60" y="-4" x="141" fill="rgb(0,0,0)"/>
+    </g>
+   </g>
+   <g id="svg_60" transform="translate(-108,0) ">
+    <g id="svg_61">
+     <rect id="svg_62" fill-opacity="0" height="20" width="60" y="-4" x="141" fill="rgb(0,0,0)"/>
+    </g>
+    <text id="svg_63" y="12" x="141" font-weight="bold" font-style="normal" font-size="18px" font-family="Arial" fill="rgb(0, 0, 0)">Debian</text>
+   </g>
+  </g>
+  <g id="svg_64" transform="matrix(1,0,0,1,60,180) ">
+   <g id="svg_65" transform="translate(4,4) scale(1.0052632093429565,1.0133333206176758) ">
+    <g id="svg_66">
+     <g id="svg_67" transform="translate(0,0) scale(1.899999976158142,0.75) ">
+      <g id="svg_68">
+       <path id="svg_69" opacity="0.294118" d="m-10.994751,-5.263157l100,0q0,0 0,0l0,100q0,0 0,0l-100,0q0,0 0,0l0,-100q0,0 0,0z" fill="#000000"/>
+       <g id="svg_70" transform="translate(129.31936645507812,-17.105262756347656) scale(0.5263158082962036,1.3333333730697632) ">
+        <path id="svg_71" d="m-266.596802,8.881579l190,0q0,0 0,0l0,75q0,0 0,0l-190,0q0,0 0,0l0,-75q0,0 0,0z" fill="none"/>
+        <path id="svg_72" opacity="0.294118" stroke-width="2" stroke-miterlimit="10" stroke-opacity="0" d="m-266.596802,8.881579m0,0l190,0q0,0 0,0l0,75q0,0 0,0l-190,0q0,0 0,0l0,-75q0,0 0,0z" stroke="rgb(0,0,0)" fill="none"/>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+   <g id="svg_73">
+    <g id="svg_74" transform="translate(0,0) scale(1.899999976158142,0.75) ">
+     <g id="svg_75">
+      <path id="svg_76" d="m-11.052628,-5.333334l100,0q0,0 0,0l0,100q0,0 0,0l-100,0q0,0 0,0l0,-100q0,0 0,0z" fill="url(#wRUowpCWPLyU)"/>
+      <g id="svg_77" transform="translate(130,-17.33333396911621) scale(0.5263158082962036,1.3333333730697632) ">
+       <path id="svg_78" d="m-267.999969,9l190,0q0,0 0,0l0,75q0,0 0,0l-190,0q0,0 0,0l0,-75q0,0 0,0z" fill="none"/>
+       <path id="svg_79" stroke-width="2" stroke-miterlimit="10" d="m-267.999969,9m0,0l190,0q0,0 0,0l0,75q0,0 0,0l-190,0q0,0 0,0l0,-75q0,0 0,0z" stroke="#333333" fill="url(#wRUowpCWPLyU)"/>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+  <g id="svg_80" transform="matrix(1,0,0,1,72,198) ">
+   <g id="svg_81" transform="translate(-81,-40) ">
+    <g id="svg_82">
+     <rect id="svg_83" fill-opacity="0" height="40" width="167" y="36" x="60" fill="rgb(0,0,0)"/>
+    </g>
+   </g>
+   <g id="svg_84" transform="translate(-81,-40) ">
+    <g id="svg_85">
+     <rect id="svg_86" fill-opacity="0" height="20" width="167" y="36" x="60" fill="rgb(0,0,0)"/>
+    </g>
+   </g>
+   <g id="svg_87" transform="translate(-81,-40) ">
+    <g id="svg_88">
+     <rect id="svg_89" fill-opacity="0" height="20" width="60" y="36" x="114" fill="rgb(0,0,0)"/>
+    </g>
+    <text id="svg_90" y="52" x="114" font-weight="bold" font-style="normal" font-size="18px" font-family="Arial" fill="rgb(0, 0, 0)">dotnet</text>
+   </g>
+   <g id="svg_91" transform="translate(-81,-40) ">
+    <g id="svg_92">
+     <rect id="svg_93" fill-opacity="0" height="20" width="167" y="56" x="60" fill="rgb(0,0,0)"/>
+    </g>
+   </g>
+   <g id="svg_94" transform="translate(-81,-40) ">
+    <g id="svg_95">
+     <rect id="svg_96" fill-opacity="0" height="20" width="114" y="56" x="87" fill="rgb(0,0,0)"/>
+    </g>
+    <text id="svg_97" y="72" x="87" font-weight="bold" font-style="normal" font-size="18px" font-family="Arial" fill="rgb(0, 0, 0)">runtime</text>
+    <text id="svg_98" y="72" x="153" font-weight="bold" font-style="normal" font-size="18px" font-family="Arial" fill="rgb(0, 0, 0)">-</text>
+    <text id="svg_99" y="72" x="159" font-weight="bold" font-style="normal" font-size="18px" font-family="Arial" fill="rgb(0, 0, 0)">deps</text>
+   </g>
+  </g>
+  <g id="svg_100" transform="matrix(1,0,0,1,60,105) ">
+   <g id="svg_101" transform="translate(4,4) scale(1.0052632093429565,1.0133333206176758) ">
+    <g id="svg_102">
+     <g id="svg_103" transform="translate(0,0) scale(1.899999976158142,0.75) ">
+      <g id="svg_104">
+       <path id="svg_105" opacity="0.294118" d="m-10.994751,-5.263157l100,0q0,0 0,0l0,100q0,0 0,0l-100,0q0,0 0,0l0,-100q0,0 0,0z" fill="#000000"/>
+       <g id="svg_106" transform="translate(129.31936645507812,-17.105262756347656) scale(0.5263158082962036,1.3333333730697632) ">
+        <path id="svg_107" d="m-266.596802,8.881579l190,0q0,0 0,0l0,75q0,0 0,0l-190,0q0,0 0,0l0,-75q0,0 0,0z" fill="none"/>
+        <path id="svg_108" opacity="0.294118" stroke-width="2" stroke-miterlimit="10" stroke-opacity="0" d="m-266.596802,8.881579m0,0l190,0q0,0 0,0l0,75q0,0 0,0l-190,0q0,0 0,0l0,-75q0,0 0,0z" stroke="rgb(0,0,0)" fill="none"/>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+   <g id="svg_109">
+    <g id="svg_110" transform="translate(0,0) scale(1.899999976158142,0.75) ">
+     <g id="svg_111">
+      <path id="svg_112" d="m-11.052628,-5.333334l100,0q0,0 0,0l0,100q0,0 0,0l-100,0q0,0 0,0l0,-100q0,0 0,0z" fill="url(#BgeIsfukFsIy)"/>
+      <g id="svg_113" transform="translate(130,-17.33333396911621) scale(0.5263158082962036,1.3333333730697632) ">
+       <path id="svg_114" d="m-267.999969,9l190,0q0,0 0,0l0,75q0,0 0,0l-190,0q0,0 0,0l0,-75q0,0 0,0z" fill="none"/>
+       <path id="svg_115" stroke-width="2" stroke-miterlimit="10" d="m-267.999969,9m0,0l190,0q0,0 0,0l0,75q0,0 0,0l-190,0q0,0 0,0l0,-75q0,0 0,0z" stroke="#333333" fill="url(#BgeIsfukFsIy)"/>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+  <g id="svg_116" transform="matrix(1,0,0,1,72,123) ">
+   <g id="svg_117" transform="translate(-119,-40) ">
+    <g id="svg_118">
+     <rect id="svg_119" fill-opacity="0" height="40" width="167" y="36" x="98" fill="rgb(0,0,0)"/>
+    </g>
+   </g>
+   <g id="svg_120" transform="translate(-119,-40) ">
+    <g id="svg_121">
+     <rect id="svg_122" fill-opacity="0" height="20" width="167" y="36" x="98" fill="rgb(0,0,0)"/>
+    </g>
+   </g>
+   <g id="svg_123" transform="translate(-119,-40) ">
+    <g id="svg_124">
+     <rect id="svg_125" fill-opacity="0" height="20" width="60" y="36" x="152" fill="rgb(0,0,0)"/>
+    </g>
+    <text id="svg_126" y="52" x="152" font-weight="bold" font-style="normal" font-size="18px" font-family="Arial" fill="rgb(0, 0, 0)">dotnet</text>
+   </g>
+   <g id="svg_127" transform="translate(-119,-40) ">
+    <g id="svg_128">
+     <rect id="svg_129" fill-opacity="0" height="20" width="167" y="56" x="98" fill="rgb(0,0,0)"/>
+    </g>
+   </g>
+   <g id="svg_130" transform="translate(-119,-40) ">
+    <g id="svg_131">
+     <rect id="svg_132" fill-opacity="0" height="20" width="38" y="56" x="163" fill="rgb(0,0,0)"/>
+    </g>
+    <text id="svg_133" y="72" x="163" font-weight="bold" font-style="normal" font-size="18px" font-family="Arial" fill="rgb(0, 0, 0)">core</text>
+   </g>
+  </g>
+  <g id="svg_134" transform="matrix(1,0,0,1,60,30) ">
+   <g id="svg_135" transform="translate(4,4) scale(1.0052632093429565,1.0133333206176758) ">
+    <g id="svg_136">
+     <g id="svg_137" transform="translate(0,0) scale(1.899999976158142,0.75) ">
+      <g id="svg_138">
+       <path id="svg_139" opacity="0.294118" d="m-10.994751,-5.263157l100,0q0,0 0,0l0,100q0,0 0,0l-100,0q0,0 0,0l0,-100q0,0 0,0z" fill="#000000"/>
+       <g id="svg_140" transform="translate(129.31936645507812,-17.105262756347656) scale(0.5263158082962036,1.3333333730697632) ">
+        <path id="svg_141" d="m-266.596802,8.881579l190,0q0,0 0,0l0,75q0,0 0,0l-190,0q0,0 0,0l0,-75q0,0 0,0z" fill="none"/>
+        <path id="svg_142" opacity="0.294118" stroke-width="2" stroke-miterlimit="10" stroke-opacity="0" d="m-266.596802,8.881579m0,0l190,0q0,0 0,0l0,75q0,0 0,0l-190,0q0,0 0,0l0,-75q0,0 0,0z" stroke="rgb(0,0,0)" fill="none"/>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+   <g id="svg_143">
+    <g id="svg_144" transform="translate(0,0) scale(1.899999976158142,0.75) ">
+     <g id="svg_145">
+      <path id="svg_146" d="m-11.052628,-5.333334l100,0q0,0 0,0l0,100q0,0 0,0l-100,0q0,0 0,0l0,-100q0,0 0,0z" fill="url(#CTFMySIeehdd)"/>
+      <g id="svg_147" transform="translate(130,-17.33333396911621) scale(0.5263158082962036,1.3333333730697632) ">
+       <path id="svg_148" d="m-267.999969,9l190,0q0,0 0,0l0,75q0,0 0,0l-190,0q0,0 0,0l0,-75q0,0 0,0z" fill="none"/>
+       <path id="svg_149" stroke-width="2" stroke-miterlimit="10" d="m-267.999969,9m0,0l190,0q0,0 0,0l0,75q0,0 0,0l-190,0q0,0 0,0l0,-75q0,0 0,0z" stroke="#333333" fill="url(#CTFMySIeehdd)"/>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+  <g id="svg_150" transform="matrix(1,0,0,1,72,58) ">
+   <g id="svg_151" transform="translate(-108,0) ">
+    <g id="svg_152">
+     <rect id="svg_153" fill-opacity="0" height="20" width="167" y="-4" x="87" fill="rgb(0,0,0)"/>
+    </g>
+   </g>
+   <g id="svg_154" transform="translate(-108,0) ">
+    <g id="svg_155">
+     <rect id="svg_156" fill-opacity="0" height="20" width="167" y="-4" x="87" fill="rgb(0,0,0)"/>
+    </g>
+   </g>
+   <g id="svg_157" transform="translate(-108,0) ">
+    <g id="svg_158">
+     <rect id="svg_159" fill-opacity="0" height="20" width="60" y="-4" x="141" fill="rgb(0,0,0)"/>
+    </g>
+   </g>
+   <g id="svg_160" transform="translate(-108,0) ">
+    <g id="svg_161">
+     <rect id="svg_162" fill-opacity="0" height="20" width="60" y="-4" x="141" fill="rgb(0,0,0)"/>
+    </g>
+    <text id="svg_163" y="12" x="141" font-weight="bold" font-style="normal" font-size="18px" font-family="Arial" fill="rgb(0, 0, 0)">MyApp</text>
+   </g>
+  </g>
+ </g>
+</svg>
