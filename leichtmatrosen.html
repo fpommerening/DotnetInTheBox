@@ -39,9 +39,10 @@
 		<div class="reveal">
 			<div class="slides">
 				<section>
-				<h1>Docker für Leichtmatrosen</h1>
-                <h2>.NET User Group Leipzig</h2>
-				<h3>28.03.2017</h3>
+					<h1>Docker für Leichtmatrosen</h1>
+                	<h2>.NET User Group Leipzig</h2>
+					<h3>28.03.2017</h3>
+					<img src="images/docker.png" style="height: 300px;border: 0px;background: transparent"/>
             	</section>
 				<section>
 				  <section>
@@ -490,7 +491,7 @@ Die Angabe des Containers erfolgt per Name oder Hash.
 						&nbsp;&nbsp; Kopiert Ordner / Dateien in das Image.<br/>
 						&nbsp;&nbsp; Kann auch eine URL oder eine tar-Datei sein.
 					</p>
-<pre><code class="docker">COPY /Publish /MyApp</i></code></pre>				
+<pre><code class="docker">ADD /Publish /MyApp</i></code></pre>				
 <p style="text-align: left">
 						WORKDIR <i>Pfad</i>
 						<br />
@@ -974,6 +975,12 @@ sudo systemctl start docker</code></pre>
 			
 			</section>
 			<section>
+				<h3>.net in the box</h3>
+				<img src="images/DockerDotNET.jpg" style="height: 400px"/>
+ 				<h2>.NET User Group Leipzig</h2>
+				<h3>25.04.2017</h3>
+			</section>
+			<section>
 				<h3>Quellen:</h3>
 				https://blog.docker.com/media/Rancher-Logo-Final-1.png
 				http://design.ubuntu.com/wp-content/uploads/ubuntu-logo14.png
@@ -984,8 +991,6 @@ sudo systemctl start docker</code></pre>
 				https://www.docker.com/sites/default/files/oyster-registry-3.png
 				http://blog.terranillius.com/post/composev3_swarm/
 			</section>
-
-
 			</div>
 		</div>
 
@@ -1007,7 +1012,7 @@ sudo systemctl start docker</code></pre>
 				multiplex: {
                  // Example values. To generate your own, see the socket.io server instructions.
                 	secret: null, // null so the clients do not have control of the master presentation
-                 	id: 'c463750cf9b5e830', // id, obtained from socket.io server
+                 	id: '54fdf9edf9164b67', // id, obtained from socket.io server
                 	url: 'https://reveal-js-multiplex-ccjbegmaii.now.sh' // Location of socket.io server
             		},
 
