@@ -6,13 +6,13 @@ services:
             - mongomessage
     webapp:
         image: fpommerening/dotnetinthebox:mongomessage
-        ports: 
-            - 5000:5000
+        ports:
+            - 4000:5000
         networks:
             - mongomessage
         depends_on:
-            - mymongodb
-         environment:
+            - messagedb
+        environment:
             - MessageConnectionString=mongodb://messagedb
 networks:
     mongomessage:
