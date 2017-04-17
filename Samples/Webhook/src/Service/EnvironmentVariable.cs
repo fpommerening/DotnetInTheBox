@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections;
 
-namespace FP.Spartakiade2017.Docker.WebHook.Service
+namespace FP.DotnetnTheBox.Webhock
 {
     public class EnvironmentVariable
     {

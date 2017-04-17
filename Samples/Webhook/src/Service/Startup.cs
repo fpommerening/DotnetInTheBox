@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Nancy.Owin;
 
-namespace FP.Spartakiade2017.Docker.WebHook.Service
+namespace FP.DotnetnTheBox.Webhock
 {
     public class Startup
     {

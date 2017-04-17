@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using Docker.DotNet;
 using Docker.DotNet.Models;
 
-namespace FP.Spartakiade2017.Docker.WebHook.Service.Modules
+namespace FP.DotnetnTheBox.Webhock.Modules
 {
     public class ContainerHelper : IDisposable
     {

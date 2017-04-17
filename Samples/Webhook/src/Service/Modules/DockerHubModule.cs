@@ -1,11 +1,11 @@
 ﻿using System;
 using System.IO;
 using System.Text;
-using FP.Spartakiade2017.Docker.WebHook.Service.Model;
+using FP.DotnetnTheBox.Webhock.Model;
 using Nancy;
 using Newtonsoft.Json;
 
-namespace FP.Spartakiade2017.Docker.WebHook.Service.Modules
+namespace FP.DotnetnTheBox.Webhock.Modules
 {
     public class DockerHubModule : NancyModule
     {

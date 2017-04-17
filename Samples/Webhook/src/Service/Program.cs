@@ -1,7 +1,7 @@
 ﻿using System.IO;
 using Microsoft.AspNetCore.Hosting;
 
-namespace FP.Spartakiade2017.Docker.WebHook.Service
+namespace FP.DotnetnTheBox.Webhock
 {
     public class Program
     {

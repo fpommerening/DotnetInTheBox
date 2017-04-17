@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace FP.Spartakiade2017.Docker.WebHook.Service.Model
+namespace FP.DotnetnTheBox.Webhock.Model
 {
     public class DockerhubWebhock
     {
