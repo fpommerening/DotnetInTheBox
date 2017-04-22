@@ -6,7 +6,7 @@ namespace FP.DotnetInTheBox.BuildOutside.Modules
     {
         public HomeModule()
         {
-            Get("/", args => $"Hallo Spartakiade - {DateTime.Now}");
+            Get("/", args => $"Hallo Community - {DateTime.Now}");
         }
     }
 }
