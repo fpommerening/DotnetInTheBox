@@ -1,16 +1,16 @@
-FROM microsoft/dotnet:1.0.3-core
+FROM microsoft/dotnet:1.0.4-core
 LABEL maintainer "frank@pommerening-online.de"
-ENV REFRESHED_AT 2017-03-12
+ENV REFRESHED_AT 2017-04-22
 
 
 COPY /app /home/
 
 RUN set -x \
-    && apt-get update && apt-get install -y --no-install-recommends ca-certificates wget p7zip && rm -rf /var/lib/apt/lists/* \
-    && p7zip -d /home/webapp.7z \
-    && mv /webapp/ /app/ \
-	&& apt-get purge -y --auto-remove ca-certificates wget p7zip
-
+    && apt-get update && apt-get install -y --no-install-recommends ca-certificates && rm -rf /var/lib/apt/lists/* \
+	&& mkdir /app/ \
+    && tar -xzf /home/webapp.tar.gz -C /app/ \
+	&& apt-get purge -y --auto-remove ca-certificates
+	
 WORKDIR /app/
 EXPOSE 4000
 ENTRYPOINT ["dotnet", "WebApp.dll"]
