@@ -6,10 +6,8 @@ ENV REFRESHED_AT 2017-04-22
 COPY /app /home/
 
 RUN set -x \
-    && apt-get update && apt-get install -y --no-install-recommends ca-certificates && rm -rf /var/lib/apt/lists/* \
 	&& mkdir /app/ \
-    && tar -xzf /home/webapp.tar.gz -C /app/ \
-	&& apt-get purge -y --auto-remove ca-certificates
+    && tar -xzf /home/webapp.tar.gz -C /app/
 	
 WORKDIR /app/
 EXPOSE 4000
