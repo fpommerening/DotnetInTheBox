@@ -1,14 +1,12 @@
-FROM microsoft/dotnet:1.0.3-core
+FROM microsoft/dotnet:1.0.4-core
 LABEL maintainer "frank@pommerening-online.de"
-ENV REFRESHED_AT 2017-03-15
+ENV REFRESHED_AT 2017-04-23
 
-COPY /app /service/
+COPY /app /home/
 
 RUN set -x \
-    && apt-get update && apt-get install -y --no-install-recommends ca-certificates wget p7zip && rm -rf /var/lib/apt/lists/* \
-    && p7zip -d /home/service.7z \
-    && mv /service/ /app/ \
-	&& apt-get purge -y --auto-remove ca-certificates wget p7zip
+   && mkdir /app/ \
+   && tar -xzf /home/webhook.tar.gz -C /app/
 
 WORKDIR /app/
 EXPOSE 4000
