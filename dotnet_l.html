@@ -185,14 +185,18 @@
 					<span class="fragment">Datei</span> <span class="fragment"> NEIN</span><br />
 					<span class="fragment">Console</span> <span class="fragment">JA</span><br />
 					<span class="fragment">aber formatiert</span>
-					<p class="fragment">
-					Vorteile:
+					<br />
+					<br />
+					<span class="fragment">
+					Vorteile
+					<br />
 					<ul>
 						<li>Kein Problem mit verteilte Umgebung</li>
 						<li>Gute Integration ins Ökosystem</li>
 						<li>Einfach zu implementieren</li>
 					</ul>
-					</p>
+					</span>
+					
 				</section>
 				<section>
 					<h3>Microservice mit .net</h3>
@@ -347,10 +351,34 @@
 					<pre><code class="docker">docker run -d --privileged user/myimage</code></pre>
 				</section>
 				<section>
-					Abfrage Container / Images
+					<h3>Abfrage Images</h3>
+					<pre><code class="cs">var imageParams = new ImagesListParameters{ MatchName = "ubuntu" };
+var images = await client.Images.ListImagesAsync(imageParams);</code></pre>
+					<br /><br />
+						<h3>Abfrage Container</h3>
+						 <pre><code class="cs">var listParam = new ContainersListParameters
+            {
+                Filters = new Dictionary&lt;string, IDictionary&lt;string, bool&gt;&gt;
+                {
+                    {"name", new Dictionary&lt;string, bool&gt; {{"pingtest", true}}}
+                }
+            };
+var result = await client.Containers.ListContainersAsync(listParam)</code></pre>
 				</section>
 				<section>
-					Container erstellen / löschen / starten / stoppen
+					<h3>Container erstellen</h3>
+					Das Ergebnis der Erstellung enthält u.a. die vergebene Container-ID. <br />
+					Wichtig: Erstellte Container sind nicht gestartet.
+					<pre><code class="cs">var createParam = new CreateContainerParameters
+            {   Image = "ubuntu:latest",
+                Cmd = new List&lt;string&gt; {"echo", "hallo world"},
+                Name = "halloworldtest"     };
+var result =  await client.Containers.CreateContainerAsync(createParam);</code></pre>
+				<h3>Container starten</h3>
+				<pre><code class="cs">await client.Containers.StartContainerAsync(containerId, null);</code></pre>
+				<h3>Container stoppen</h3>
+				<pre><code class="cs">await client.Containers.StopContainerAsync(containerId, 
+	new ContainerStopParameters(), CancellationToken.None);</code></pre>
 				</section>
 				<section>
 					Beispiel: Webhook für automatische Bereitstellung
@@ -368,9 +396,11 @@
 					<img src="images/webhock_02.png" style="height: 150px; float: left">
 				</section>
 			</section>
+			<!--
 			<section>
 					<h2>CI / DC mit TFS / Visual Studio Team Services</h2>
 			</section>
+			-->
 			<section>
 				<h3>Quellen:</h3>
 				https://blog.docker.com/media/Rancher-Logo-Final-1.png
