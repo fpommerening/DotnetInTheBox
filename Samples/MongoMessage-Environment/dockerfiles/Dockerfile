@@ -1,15 +1,12 @@
 FROM microsoft/dotnet:1.0.4-core
 LABEL maintainer "frank@pommerening-online.de"
-ENV REFRESHED_AT 2017-03-27
-
+ENV REFRESHED_AT 2017-04-23
 
 COPY /app /home/
 
 RUN set -x \
-    && apt-get update && apt-get install -y --no-install-recommends p7zip && rm -rf /var/lib/apt/lists/* \
-    && p7zip -d /home/mongomessage.7z \
-    && mv /mongomessage/ /app/ \
-	&& apt-get purge -y --auto-remove p7zip
+	&& mkdir /app/ \
+    && tar -xzf /home/mongomessage.tar.gz -C /app/
 
 WORKDIR /app/
 EXPOSE 5000
