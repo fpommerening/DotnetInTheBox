@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Threading;
+using Nancy.Hosting.Self;
 
 namespace FP.DotnetInTheBox.RaspberryPi
 {

@@ -1,6 +1,6 @@
-FROM fpommerening/rpi-mono
+FROM fpommerening/rpi-mono:wheezy
 LABEL maintainer "frank@pommerening-online.de"
-ENV REFRESHED_AT 2017-03-11
+ENV REFRESHED_AT 2017-04-24
 
 COPY /webapp /app/
 
