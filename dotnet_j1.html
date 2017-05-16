@@ -1,0 +1,605 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Docker Grundlagen für Windows & Linux Container</title>
+
+		<meta name="description" content="Virtualization with Docker - Grundlagen für Windows &  Linux Container">
+    	<meta name="author" content="Frank Pommerening">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/white.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+	<style>
+		a.infolink {
+			width: 40px;
+			height: 40px;
+			display: inline-block;
+			background-image: url("images/about.svg");
+			background-size:cover;
+
+		}
+    </style>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section >
+					<h2>Docker Grundlagen für <br/> Windows &  Linux Container</h2>
+					<br />
+					<br />
+					<h3>Virtualization with Docker -<br /> University Students meet IT Professionals</h3>
+                	<h3>Softwerkskammer Jena</h3>
+            	</section>
+				<section id="Überblick">
+				<section>
+					<h2>Docker im Überblick</h2>
+					<img src="images/docker.png" style="border:0px;width:400px"/>
+				</section>
+				 <section>
+					<h3>Was ist Docker?</h3>
+					Anwendungsvirtualisierung: Anwendungen werden unter Verwendung von Betriebssystemvirtualisierung in Containern isoliert ausgeführt.
+					<br />
+					<br />
+					<span class="fragment">
+						Buzzword-Bingo:
+					</span>
+					<br/>
+						<ul>
+							<li class="fragment">Microservices</li>
+							<li class="fragment">DevOps</li>
+							<li class="fragment">CI / CD (Continuous Integration / Continuous Deployment)</li>
+							<li class="fragment">XaaS (Anything as a Service)</li>
+							<li class="fragment">Portablität</li>
+						</ul>
+				 </section>
+				 <section>
+
+					<h3>Virtualisierung vs. Container</h3>
+					<img src="images/schema_vm.svg" alt="schema virtual maschine">
+					<img src="images/schema_docker.svg" alt="schema docker">
+				 </section>
+				 <section>
+					 <h3>Images</h3>
+					 <img src="images/layers.svg" alt="docker layers" style="float:right"/>
+						<ul>
+							<li>Template für Container</li>
+							<li>Snapshot / Archiv</li>
+							<li>Readonly und versioniert </li>
+							<li>Ebenenprinzip (Speicherung nur Differenzen)</li>
+						</ul>
+				 </section>
+				 <section>
+					<h3>Container</h3>
+					<ul>
+						<li>Laufende Instanz eines Image</li>
+						<li>nur zur Laufzeit existent</li>
+						<li>Schreibbare Schicht wird <br />oberhalb des Image bereitgestellt</li>
+					</ul>
+					<img src="images/schema_container.svg" alt="schema docker" style="float:right">
+				 </section>
+				 <section>
+					<h3>Docker-Ökosystem</h3>
+					Docker umfasst mehr als die Ausführungsumgebung für Container:
+					<br />
+					<table>
+						<tbody>
+							<tr>
+								<td>Compose</td>
+								<td>Verwalten von Anwendungsstacks</td>
+							</tr>
+							<tr>
+								<td>Hub</td>
+								<td>(öffentliche) Docker-Registry</td>
+							</tr>
+							<tr>
+								<td>Swarm / Swarm Mode</td>
+								<td>Verwaltung von Container in Clustern</td>
+							</tr>
+							<tr>
+								<td>Cloud</td>
+								<td>Hostinganbieter</td>
+							</tr>
+							<tr>
+								<td>Maschine</td>
+								<td>Bereitstellung von Docker-Hosts</td>
+							</tr>
+							<tr>
+								<td>Store</td>
+								<td>Bereitstellung zertifizierter Images</td>
+							</tr>
+							<tr>
+								<td>Kinematic</td>
+								<td>Grafisches Verwaltungswerkzeug</td>
+							</tr>
+						</tbody>
+					</table>
+				 </section>
+			</section>
+			<section>
+				<section>
+					<h2>Docker unter Linux</h2>
+					<img src="images/docker.png" style="border:0px;height:400px"/>
+					<img src="images/tux.svg" style="border:0px;height:400px"/>
+				</section>
+				<section>
+					Start im März 2013 <br/>
+					<span class="fragment">Alles neu</span> <span class="fragment"> - NEIN</span></br>
+					<span class="fragment">
+						Verwendung von erprobten Technologien des Linux-Kernel
+						<ul>
+							<li>LXC (BSD Jails / Solaris Zonen / OpenVZ)</li>
+							<li>Cgroups
+								<ul>
+									<li>Ressourcenlimits</li>
+									<li>CPU-Zeit, Speicher, IO ...</li>
+								</ul>
+							</li>
+							<li>Namespaces
+							<ul>
+								<li>Simulation geschlossener Umgebungen</li>
+								<li>Hostnamen, Netzwerk, Prozesse ...</li>
+							</ul>
+							</li>
+							<li>chroot (Verbindung des Mountpunkt)</li>
+						</ul>
+					</span>
+				</section>
+				<section>
+					Heute Bestandteil vieler Standard-Distributionen
+					<img src="images/ubuntulogo.png" style="border:0px;float:right;height: 100px"/>
+					<img src="images/archlinuxlogo.svg" style="border:0px;float:left;height: 100px; margin-top: 50px"/>
+					<ul>
+						<li>Arch Linux</li>
+						<li>CentOS</li>
+						<li>Red Hat Enterprise Linux</li>
+						<li>openSUSE / SUSE Linux Enterprise</li>
+						<li>Ubuntu</li>
+						<li>...</li>
+					</ul>
+					
+					<br/>
+					<br/>
+					<img src="images/rancherlogo.png" style="border:0px;float:left;height: 100px; margin-top: 0px"/>
+					Spezielle Docker-Host Distributionen<br/
+					<ul>
+						<li>Core-OS</li>
+						<li>Rancher-OS</li>
+					</ul>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2>Docker unter Windows</h2>
+					<img src="images/windows.png" style="border:0px;height:400px"/>
+					<img src="images/docker.png" style="border:0px;height:400px"/>
+				</section>
+				<section data-menu-title="Beziehung Microsoft und Docker">
+					<ul>
+						<li>Partnerschaft zwischen Microsoft und Docker seit 2014</li>
+						<li>Container-Technik enthalten in
+							<ul>
+								<li>Windows Server 2016</li>
+								<li>Windows 10 Professional / Enterprise (ab Anniversary Update)</li>
+							</ul>
+						</li>
+						<li>Unterstützung des kompletten Ökosystems (Hub / Compose / Swarm)</li>
+						<li>Docker-Integration Visual Studio 2017</li>
+						<li>Azure Container Services</li>
+						<li>SQL-Server als Linux-Container</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Isolation</h3>
+					Windows Container vs. Hyper-V Container<br />
+					<img src="images/schema_win_docker.svg" alt="schema virtual maschine" >
+					<img src="images/schema_hyperv_docker.svg" alt="schema docker" >
+				</section>
+				<section>
+					<h3>Basisimages</h3>
+					<ul>
+						<li>Bereitstellung über Dockerhub</li>
+						<li>microsoft/windowsservercore
+							<ul>
+								<li>Unterstützt Großteil der Windows Server Anwendung</li>
+								<li>IIS</li>
+								<li>SQL-Server</li>
+								<li>.net Framework 1.0 bis 4.7 (full)</li>
+								<li>5 GB (komprimiert)</li>
+							</ul>
+						</li>
+						<li>microsoft/nanoserver
+							<ul>
+								<li>Minimale Windows Version</li>
+								<li>IIS 10</li>
+								<li>.net Core</li>
+								<li>333 MB (komprimiert)</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2>Docker - Grundlagen</h2>
+				</section>
+				<section>
+					<h3>Informationen</h3>
+					<h4>Docker-Host&nbsp;<a href="https://docs.docker.com/engine/reference/commandline/info/" class="infolink" target="_blank" ></a></h4>
+					<pre><code class="docker">docker info [OPTIONS]</code></pre> 
+					Zeigt Informationen über die Docker-Installation und <br />den Host (OS / CPU / RAM ...).
+					<br />
+					<br />
+					<h4>Container&nbsp;<a href="https://docs.docker.com/engine/reference/commandline/ps/" class="infolink" target="_blank" ></a></h4>
+					 <pre><code class="docker">docker ps [OPTIONS] </code></pre>
+					 Zeigt Informationen für die Container z.B. Name, Image, Port ... an.
+<table>
+	 <tbody>
+		 <tr>
+			 <td>-a / --all</th>
+			 <td>zeigt Informationen zu allen, auch inaktiven, Containern</td>
+		 </tr>
+		 <tr>
+			 <td>-l / --latest</th>
+			 <td>zeigt Informationen zum letzten erstellten Container</td>
+		 </tr>
+</tbody>
+</table>				
+				</section>
+<section>
+	<h3>Container-Operationen</h3>
+					<h4>Erstellung&nbsp;<a href="https://docs.docker.com/engine/reference/run/" class="infolink" target="_blank"></a></h4>
+					 <pre><code class="docker">docker run [OPTIONS] IMAGE[:Tag] [COMMAND]</code></pre>
+ <table>
+	 <tbody>
+		 <tr>
+			 <th>Name</th>
+			 <td>--name [Name] (muss eindeutig im Host sein)</td>
+		 </tr>
+		 <tr>
+			 <th>Startverhalten</th>
+			 <td>-it (interaktives Terminal) /-d (Hintergrunddienst)</td>
+		 </tr>
+		 <tr>
+			 <th>Volumen-Mapping</th>
+			 <td>-v Quellpfad:Zielpfad</td>
+		 </tr>
+		 <tr>
+			 <th>Port-Mapping</th>
+			 <td>-p Container-Port:Host-Port</td>
+		 </tr>
+		 <tr>
+			 <th>Endverhalten</th>
+			 <td>-rm Container direkt entfernen</td>
+		 </tr>
+	 </tbody>
+ </table>
+				</section>
+				<section>
+Die Angabe des Containers erfolgt per Name oder Hash.
+					<h4>Starten <a href="https://docs.docker.com/engine/reference/commandline/start/" class="infolink" target="_blank"></a></h4>
+					<pre><code class="docker">docker start [OPTIONS] CONTAINER</code></pre>
+<table>
+	 <tbody>
+		 <tr>
+			 <td>-a / --attach</td>
+			 <td>Verbindung mit der Standardausgabe herstellen.</td>
+		 </tr>
+		 <tr>
+			 <td>-i / --interactive</td>
+			 <td>Verbindung mit der Standardeingabe herstellen.</td>
+		 </tr>
+</tbody>
+</table>
+<br />
+					<h4>Stoppen <a href="https://docs.docker.com/engine/reference/commandline/stop/" class="infolink" target="_blank"></a></h4>
+					<pre><code class="docker">docker stop [OPTIONS] CONTAINER</code></pre>
+<table>
+	 <tbody>
+		 <tr>
+			 <td>-t / --time</td>
+			 <td>Zeit, in Sekunden, bis Container gekillt wird.</td>
+		 </tr>
+</tbody>
+</table>
+				</section>
+				<section>
+					<h4>Verbindung herstellen <a href="https://docs.docker.com/engine/reference/commandline/attach/" class="infolink" target="_blank"></a></h4>
+					<pre><code class="docker">docker attach [OPTIONS] CONTAINER</code></pre>
+					Stellt eine Verbindung mit der Standardausgabe des laufenden Containers her.
+					<br />
+					<br />
+					<h4>Löschen <a href="https://docs.docker.com/engine/reference/commandline/rm/" class="infolink" target="_blank"></a></h4>
+					<pre><code class="docker">docker rm [OPTIONS] CONTAINER</code></pre>
+<table>
+	 <tbody>
+		 <tr>
+			 <td>-f / --force</td>
+			 <td>Bricht den noch laufenden Container ab</td>
+		 </tr>
+		 <tr>
+			 <td>-v / --volumes</td>
+			 <td>Löscht die mit dem Container verbundenen Volumes</td>
+		 </tr>
+</tbody>
+</table>
+					<br />
+					 <h4>Log-Meldung anzeigen<a href="https://docs.docker.com/engine/reference/commandline/logs/" class="infolink" target="_blank" ></a></h4>
+					<pre><code class="docker">docker logs [OPTIONS] CONTAINER</code></pre>
+				</section>
+				<section>
+					<h3>Image-Operationen </h3>
+					<h4>Anzeige<a href="https://docs.docker.com/engine/reference/commandline/images/" class="infolink" target="_blank" ></a></h4>
+					<pre><code class="docker">docker images [OPTIONS]</code></pre>
+<table>
+	 <tbody>
+		 <tr>
+			 <td>-a / --all</td>
+			 <td>Zeigt alle, auch Zwischencontainer, an</td>
+		 </tr>
+		 <tr>
+			 <td>-f / --filter</th>
+			 <td>Filtert die Liste</td>
+		 </tr>
+	</tbody>
+</table>
+					<br />
+					<h4>Herunterladen / Aktualisieren<a href="https://docs.docker.com/engine/reference/commandline/pull/" class="infolink" target="_blank" ></a></h4>
+					<pre><code class="docker">docker pull [OPTIONS] [Registry]IMAGENAME</code></pre>
+					Ist keine Registry angegeben, wird der Default i.d.R. Docker-Hub verwendet.
+					Beim Aktualisieren bleibt das vorhandene Image erhalten.
+					<pre><code class="docker">docker pull  myregistry.local:5000/myuser/myimage</code></pre>
+					<br />
+				</section>
+				<section>
+					<h4>Löschen<a href="https://docs.docker.com/engine/reference/commandline/rmi/" class="infolink" target="_blank" ></a></h4>
+					<pre><code class="docker">docker rmi [OPTIONS] </code></pre>
+<table>
+	 <tbody>
+		 <tr>
+			 <td>-f / --force</td>
+			 <td>Erzwingt das Löschen</td>
+		 </tr>
+</tbody>
+</table>			
+					<h4>Erstellung aus Container <a href="https://docs.docker.com/engine/reference/commandline/commit/" class="infolink" target="_blank" ></a></h4>
+					<pre><code class="docker">docker commit [OPTIONS] CONTAINER [REPOSITORY[:TAG]]</code></pre>
+<table>
+	 <tbody>
+		 <tr>
+			 <td>-a / --author</td>
+			 <td>Ersteller</td>
+		 </tr>
+		 <tr>
+			 <td>-m / --message</th>
+			 <td>Commit message</td>
+		 </tr>
+</tbody>
+</table><br/>
+<h4>Übertragung zur Registry <a href="https://docs.docker.com/engine/reference/commandline/push/" class="infolink" target="_blank" ></a></h4>
+					<pre><code class="docker">docker push [OPTIONS] [Registry]IMAGENAME[:TAG] </code></pre>
+					Vor der Übertragung in den Dockerhub ist eine Authentifizierung erforderlich.
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2>Docker-File</h2>
+<p class="fragment">
+	Ist eine Auszeichnungssprache (ML) für den Aufbau eines Docker-Images.<br />
+	Die Speicherung erfolgt als Textdatei.
+</p>
+				</section>
+				<section>
+					<p style="text-align: left">
+						FROM <i>Basisimage[:TAG]</i>
+						<br />
+						&nbsp;&nbsp; Imagename ggf. mit Tag auf welchem das eigene Image basieren soll
+					</p>
+<pre><code class="docker">FROM ubuntu:16.10</code></pre>
+					<p style="text-align: left">
+						LABEL maintainer <i>Email</i>
+						<br />
+						&nbsp;&nbsp; E-Mail-Adresse des Autors
+					</p>
+<pre><code class="docker">LABEL maintainer "max@mustermann.de"</code></pre>
+<p style="text-align: left">&nbsp;&nbsp; Veraltet: MAINTAINER</p>
+<pre><code class="docker">MAINTAINER Max Mustermann "max@mustermann.de"</code></pre>
+					<p style="text-align: left">
+						RUN <i>COMMAND </i>
+						<br />
+						&nbsp;&nbsp; Befehl zur Ausführung im Container z.B. Installieren von Software.
+					</p>
+<pre><code class="docker">RUN apt-get update</code></pre>
+				</section>
+				<section>
+					<p style="text-align: left">
+						ENV <i>VARIABLENNAME Wert</i>
+						<br />
+						&nbsp;&nbsp; Definiert Variablen z.B. die Version oder das Datum der Aktualisierung, die auch innerhalb der Befehle verwendet werden können.
+					</p>
+<pre><code class="docker">ENV REFRESHED_AT 2017-01-25</code></pre>
+<p style="text-align: left">
+						EXPOSE <i>Portnummer</i>
+						<br />
+						&nbsp;&nbsp; Definiert Ports, welche durch das Image bereitgestellt werden.
+					</p>
+<pre><code class="docker">EXPOSE 8080</code></pre>
+<p style="text-align: left">
+						VOLUME <i>Pfad</i>
+						<br />
+						&nbsp;&nbsp; Definiert Volume (Verzeichnis), welche durch das Image bereitgestellt wird.
+					</p>
+<pre><code class="docker">VOLUME ["/mydata"]</code></pre>
+				</section>
+				<section>
+<p style="text-align: left">
+						COPY  <i>Quellpfad</i> <i>Zielpfad</i>
+						<br />
+						&nbsp;&nbsp; Kopiert Ordner / Dateien in das Image
+					</p>
+<pre><code class="docker">COPY /Publish /MyApp</i></code></pre>
+<p style="text-align: left">
+						ADD  <i>Quellpfad / URL</i> <i>Zielpfad</i>
+						<br />
+						&nbsp;&nbsp; Kopiert Ordner / Dateien in das Image.<br/>
+						&nbsp;&nbsp; Kann auch eine URL oder eine tar-Datei sein.
+					</p>
+<pre><code class="docker">ADD /Publish /MyApp</i></code></pre>				
+<p style="text-align: left">
+						WORKDIR <i>Pfad</i>
+						<br />
+						&nbsp;&nbsp; Definiert den Einstiegspfad für die Ausführung innerhalb des Containers.
+					</p>
+<pre><code class="docker">WORKDIR /MyApp</code></pre>	
+				</section>
+				<section>
+					<p style="text-align: left">
+						ENTRYPOINT <i>[COMMAND, ARGS]</i>
+						<br />
+						&nbsp;&nbsp; Definiert den Startbefehl des Images inkl. Parameter.
+					</p>
+<pre><code class="docker">ENTRYPOINT ["npm", "rum", "testapp"]</code></pre>	
+<p style="text-align: left">
+						CMD <i>COMMAND</i>
+						<br />
+						&nbsp;&nbsp; Definiert den Startbefehl des Images inkl. Parameter. <br/>
+						&nbsp;&nbsp; Ein Überschreiben ist möglich.
+					</p>
+<pre><code class="docker">CMD ["npm", "rum", "testapp"]</code></pre>	
+				</section>
+				<section>
+					<h3>Beispiel</h3>
+					<pre><code class="docker">FROM fpommerening/spartakiade2017-rabbitmq:core-base
+LABEL maintainer "frank@pommerening-online.de"
+ENV REFRESHED_AT 2017-01-31
+ENV Picflow_VERSION 0.0.1
+
+COPY /app /home/
+
+RUN set -x \
+	&& p7zip -d /home/picflow-webapp.7z \
+	&& mv /picflow-webapp/ /app/ \
+	&& apt-get purge -y --auto-remove ca-certificates wget p7zip
+
+WORKDIR /app/
+EXPOSE 5000
+ENTRYPOINT ["dotnet", "WebApp.dll"]
+						</code></pre>	
+				</section>
+				<section>
+					<h3>Empfehlungen <a href="https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices/" class="infolink" target="_blank"></a></h3>
+					<ul>
+						<li>Installiere nur notwendige Pakete</li>
+						<li>Jeder Container hat nur einen Zweck</li>
+						<li>Minimiere die Anzahl der Ebenen</li>
+						<li>Sortiere Argumente</li>
+						<li>Nutze .dockerignore - File</li>
+						<li>apt-get update / apt-get install immer in einem Befehl</li>
+						<li>Verwende Pipes</li>
+					</ul>
+					<br/>
+					<br/>
+					<p class="fragment">Hauptziele: Übersicht erhöhen / Imagegröße reduzieren</p>
+				</section>
+			</section>
+			<section>
+					<img src="images/docker.png" style="border:0px;height:200px"/><br />
+					<h2>Vielen Dank für die Aufmerksamkeit</h2>
+					Teil 2 (ab 20 Uhr)<br />
+					<span style="font-weight: bold"> Docker Training Tasks</span><br />
+					Benjamin Nothdurft<br/><br />
+					<span style="font-weight: bold"> Show Cases of Complex Docker Usage Scenarios</span><br />
+					Frank Pommerening
+
+			</section>
+			<section>
+				<h3>Quellen:</h3>
+				<p style="font-size:18px">
+
+					https://commons.wikimedia.org/wiki/File:Windows_logo_-_2012.png <br/>
+					https://commons.wikimedia.org/wiki/File:Tux.svg<br />
+					https://blog.docker.com/media/Rancher-Logo-Final-1.png<br />
+					http://design.ubuntu.com/wp-content/uploads/ubuntu-logo14.png<br />
+					https://www.archlinux.org/static/logos/archlinux-logo-dark-1200dpi.b42bd35d5916.png<br />
+					http://blog.d2-si.fr/2016/06/29/start-up-docker-swarm/<br />
+					http://www.willhoeft-it.com/2016/06/03/docker-compose.html<br />
+
+
+				</p>
+			</section>
+			</div>
+		</div>
+	
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+            	progress: true,
+            	history: true,
+            	center: true,
+            	width: 1250,
+            	height: 720,
+            	slideNumber: false,
+            	margin: 0.0,
+				
+				multiplex: {
+                 // Example values. To generate your own, see the socket.io server instructions.
+                	secret: null, // null so the clients do not have control of the master presentation
+                 	id: '7c26e85190d7d66f', // id, obtained from socket.io server
+                	url: 'https://reveal-js-multiplex-ccjbegmaii.now.sh' // Location of socket.io server
+            	},
+					
+				menu: {
+					side: 'left',
+					
+					titleSelector: 'h1, h2, h3, h4, h5, h6',
+					hideMissingTitles: false,
+					markers: false,
+					custom: false,
+					themes: [
+						{ name: 'Black', theme: 'css/theme/black.css' },
+						{ name: 'White', theme: 'css/theme/white.css' }
+						],
+
+					transitions: true,
+					openButton: true,
+					openSlideNumber: false,
+					keyboard: true,
+					sticky: false,
+					autoOpen: true
+				},
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function () { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: 'plugin/zoom-js/zoom.js', async: true },
+                    { src: 'plugin/notes/notes.js', async: true },
+                    { src: '//cdn.socket.io/socket.io-1.3.5.js', async: true },
+                    { src: 'plugin/multiplex/client.js', async: true },
+					{ src: 'plugin/menu/menu.js', async: true}
+				]
+			});
+		</script>
+	</body>
+</html>

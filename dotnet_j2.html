@@ -1,0 +1,286 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Show Cases of Complex Docker Usage Scenarios</title>
+
+		<meta name="description" content="Virtualization with Docker - Show Cases of Complex Docker Usage Scenarios">
+    	<meta name="author" content="Frank Pommerening">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/white.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+	<style>
+		a.infolink {
+			width: 40px;
+			height: 40px;
+			display: inline-block;
+			background-image: url("images/about.svg");
+			background-size:cover;
+
+		}
+    </style>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section id="start">
+					<h2>Show Cases of Complex <br/>Docker Usage Scenarios</h2>
+					<br />
+					<br />
+					<h3>Virtualization with Docker - <br> University Students meet IT Professionals</h3>
+                	<h3>Softwerkskammer Jena</h3>
+            	</section>
+				<section>
+				<section>
+					<h2>Docker auf Raspberry PI (3)</h2>
+					<img src="images/raspi.png" style="border:0px;height:400px"/>
+					<img src="images/docker.png" style="border:0px;height:400px"/>
+				</section>
+				<section>
+					<h3>Installation</h3>
+					<h4>Hypriot OS <a href="https://blog.hypriot.com/" target="_blank" class="infolink"></a></h4>
+					Hypriot OS ist eine spezielle Distribution für Docker auf ARM-Geräte. Sie war bereits vor dem offiziellen Support durch Docker verfügbar.
+					<br />
+					<h4>Raspbian Jessie Lite <a href="https://www.raspberrypi.org/downloads/raspbian/" target="_blank" class="infolink"></a></h4>
+					Docker unterstützt nun die ARM-Plattform offiziell. Es kann deshalb auf der Distribution Raspbian der Raspberry Foundation installiert werden.
+					<pre><code class="bash">curl -sSL get.docker.com | sh
+sudo usermod -aG docker pi
+sudo systemctl enable docker
+sudo systemctl start docker</code></pre>
+				</section>
+				<section>
+					<h3>Build .net App</h3>
+					Die Unterstützung der ARM-Plattform für .net core ist noch in Entwicklung.
+					Deshalb sollte man aktuell auf Mono von Xamarin / Microsoft zurückgreifen.
+					<br />
+					<br />
+					Images die auf x86/x64 erstellt wurden, sind auf dem Raspberry nicht lauffähig!
+					<br />
+					<br />
+					Verwendung spezieller Basisimages erforderlich<br />
+					<ul>
+						<li>resin/rpi-raspbian</li>
+						<li>resin/raspberrypi3-debian</li>
+						<li>yyolk/rpi-archlinuxarm</li>
+						<li>ioft/armhf-ubuntu</li>
+					</ul>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2>Docker Swarm / Docker Swarm Mode</h2>
+					<img src="images/swarmlogo.jpg" style="width: 300px;border: 0"/>
+					<p class="fragment">Container-Cluster über mehrere Docker-Hosts</p>
+				</section>
+					<section>
+					<h3>Docker Swarm Visualizer</h3>
+					<p style="text-align: left">
+					Das Tool Docker Swarm Visualizer gestattet eine Übersicht der laufenden Services und Hosts.
+					<img src="images/visualizer.png" style="border: 0;height: 350px;float:right" >
+					<br />
+					<br />
+					Lizenz: Apache <a href="https://github.com/ManoMarks/docker-swarm-visualizer" target="_blank">GitHub</a>
+					<br />
+					<br />
+					Verfügbare Container:<br />
+					<ul>
+						<li>Linux x64:  <a href="https://hub.docker.com/r/manomarks/visualizer/" target="_blank">manomarks/visualizer</a></li>
+						<li>Linux arm:  <a href="https://hub.docker.com/r/alexellis2/visualizer-arm/" target="_blank">alexellis2/visualizer-arm</a></li>
+						<li>Windows:  <a href="https://hub.docker.com/r/stefanscherer/visualizer-windows/" target="_blank">stefanscherer/visualizer-windows</a></li>
+					</ul>
+					</p>
+				</section>
+				<section>
+					<h3>Docker Swarm <a href ="https://docs.docker.com/engine/reference/commandline/swarm/" target="_blank" class="infolink"></a> </h3>
+					<h4>Cluster / Swarm initalisieren</h4>
+					<pre><code class="docker">docker swarm init [OPTIONS] </code></pre>
+					<p style="text-align: left">
+						Nach erfolgreicher Erstellung werden der Token und Befehl zum Hinzufügen angezeigt.
+					</p>
+					<h4>Knoten hinzufügen</h4>
+					<pre><code class="docker">docker swarm join [OPTIONS] HOST:PORT</code></pre>
+					<p style="text-align: left">
+						-- token Zugriffstoken
+					</p>
+					
+				</section>
+				<section>
+				<h4>Knoten entfernen</h4>
+				<pre><code class="docker">docker swarm leave [OPTIONS]</code></pre>
+				<p style="text-align: left">
+					--force, -f Erzwingt das Verlassung und ignoriert Warnungen
+					WICHTIG: die Node muss noch mein Manager abgemeldet werden!
+				</p>
+				<h4>Zugriffstoken anzeigen</h4>
+					<pre><code class="docker">docker swarm join-token [OPTIONS] (worker|manager)</code></pre>
+				<h4>Cluster / Swarm aktualsieren</h4>
+					<pre><code class="docker">docker swarm Update [OPTIONS]</code></pre>
+				</section>
+				<section>
+					<h3>Docker Node <a href="https://docs.docker.com/engine/reference/commandline/node/" targe="_blank" class="infolink"></a></h3>
+					<h4>Knoten anzeigen</h4>
+					<pre><code class="docker">docker node ls [OPTIONS]</code></pre>
+					<h4>Detailierte Informationen zu / zum Knoten anzeigen</h4>
+					<pre><code class="docker">docker node inspect [OPTIONS] self|NODE </code></pre>
+					<h4>Aufgaben / Prozesse eines Knoten anzeigen</h4>
+					<pre><code class="docker">docker node ps [OPTIONS] [NODE] </code></pre>
+					<h4>Knoten aus dem Cluster entfernen</h4>
+					<pre><code class="docker">docker node rm [OPTIONS] Node</code></pre>
+				</section>
+				<section>
+					<h4>Knoten vom Worker zum Manager heraufstufen</h4>
+					<pre><code class="docker">docker node promote NODE</code></pre>
+					<h4>Knoten vom Manager zum Worker herabstufen</h4>
+					<pre><code class="docker">docker node demote NODE</code></pre>
+				</section>
+				<section>
+					<h3>Services / Anwendung</h3>
+					Anwendungen die Cluster bereitgestellt werden, werden als Services bezeichnet.
+					Um den Service auf mehreren Nodes bereitzustellen, muss das Image in einer Registry abgelegt sein.
+					<br />
+					<br />
+					<h4>Service erstellen <a href="https://docs.docker.com/engine/reference/commandline/service_create/" target="_blank" class="infolink"></a></h4>
+					<pre><code class="docker">docker service create [OPTIONS] IMAGE [COMMAND] [ARG...]</code></pre>
+					<table>
+	 			<tbody>
+		 <tr>
+			 <td>--name</td>
+			 <td>Name für den Service</td>
+		 </tr>
+		 <tr>
+			 <td>--network</td>
+			 <td>Verwendetes Netzwerk</td>
+		 </tr>
+		  <tr>
+			 <td>--publish, -p</td>
+			 <td>Veröffentlicht den Port</td>
+		 </tr>
+		  <tr>
+			 <td>--replicas</td>
+			 <td>Zahl der gleichzeitig laufenden Instanzen</td>
+		 </tr>
+</tbody>
+</table>
+				</section>
+				<section>
+					<h4>Services entfernen <a href="https://docs.docker.com/engine/reference/commandline/service_rm/" target="_blank" class="infolink"></a></h4>
+					<pre><code class="docker">docker service rm SERVICE</code></pre>
+					<h4>Services anzeigen <a href="https://docs.docker.com/engine/reference/commandline/service_ls/" target="_blank" class="infolink"></a></h4>
+					<pre><code class="docker">docker service ls [OPTIONS] </code></pre>
+					<h4>Details zu / zum Services anzeigen <a href="https://docs.docker.com/engine/reference/commandline/service_inspect/" target="_blank" class="infolink"></a></h4>
+					<pre><code class="docker">docker service inspect [OPTIONS] SERVICE</code></pre>
+					<h4>Services hoch/runter skalieren <a href="https://docs.docker.com/engine/reference/commandline/service_scale/" target="_blank" class="infolink"></a></h4>
+					<pre><code class="docker">docker service scale SERVICE=ANZAHL</code></pre>
+					<h4>Logs eines Services anzeigen <a href="https://docs.docker.com/engine/reference/commandline/service_logs/" target="_blank" class="infolink"></a></h4>
+					<pre><code class="docker">docker service logs [OPTIONS] SERVICE</code></pre>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2>Microservice mit .net</h2>
+				</section>
+				<section>
+                     <h2>Image-Workflow</h2>
+                     <img src="images/ImageProcessing.svg"  style="border:0px;width:800px" alt="Beispiel PicFlow">
+                 </section>
+				<section>
+					<ul>
+						<h2>Empfehlungen</h2>
+						<li>Verwendung eines gemeinsamen Basisimage 
+							<ul>
+								<li>Gleiche Version von .net und Abhängigkeiten für alle Serviceimages</li>
+								<li>Geringere Build-Zeiten</li>
+							</ul>
+						</li>
+						<li>Infrastruktur-Container ggf. trotz Abhängigkeit  noch nicht verfügbar (Reliability / Retry) </li>
+						<li>Build outside bevorzugen</li>
+						<li>Linux-Container besser auf Linux statt Windows-Host erstellen</li>
+					</ul>
+				</section>
+				
+			</section>
+				<section>
+					<img src="images/docker.png" style="border:0px;height:200px"/><br />
+					<h2>Vielen Dank für die Aufmerksamkeit</h2>
+			</section>
+			<section>
+				<h3>Quellen:</h3>
+				
+			</section>
+			</div>
+		</div>
+	
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+            	progress: true,
+            	history: true,
+            	center: true,
+            	width: 1250,
+            	height: 720,
+            	slideNumber: false,
+            	margin: 0.0,
+
+				multiplex: {
+                 // Example values. To generate your own, see the socket.io server instructions.
+                	secret: null, // null so the clients do not have control of the master presentation
+                 	id: '2bc0ae0403cd7522', // id, obtained from socket.io server
+                	url: 'https://reveal-js-multiplex-ccjbegmaii.now.sh' // Location of socket.io server
+            	},
+					
+				menu: {
+					side: 'left',
+					
+					titleSelector: 'h1, h2, h3, h4, h5, h6',
+					hideMissingTitles: false,
+					markers: false,
+					custom: false,
+					themes: [
+						{ name: 'Black', theme: 'css/theme/black.css' },
+						{ name: 'White', theme: 'css/theme/white.css' }
+						],
+
+					transitions: true,
+					openButton: true,
+					openSlideNumber: false,
+					keyboard: true,
+					sticky: false,
+					autoOpen: true
+				},
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function () { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: 'plugin/zoom-js/zoom.js', async: true },
+                    { src: 'plugin/notes/notes.js', async: true },
+                    { src: '//cdn.socket.io/socket.io-1.3.5.js', async: true },
+                    { src: 'plugin/multiplex/client.js', async: true },
+					{ src: 'plugin/menu/menu.js', async: true}
+				]
+			});
+		</script>
+	</body>
+</html>
