@@ -257,3 +257,4 @@ tools/
 
 
 tmp/
+/Samples/BuildOutside/dockerfiles/webapp/app

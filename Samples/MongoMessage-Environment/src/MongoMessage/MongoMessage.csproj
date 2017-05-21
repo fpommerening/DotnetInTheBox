@@ -6,7 +6,8 @@
     <AssemblyName>MongoMessage</AssemblyName>
     <OutputType>Exe</OutputType>
     <PackageId>MongoMessage</PackageId>
-    <RuntimeFrameworkVersion>1.0.4</RuntimeFrameworkVersion>
+    <RuntimeFrameworkVersion>1.0.5</RuntimeFrameworkVersion>
+    <RuntimeFrameworkVersion>1.0.5</RuntimeFrameworkVersion>
     <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
     <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
     <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
