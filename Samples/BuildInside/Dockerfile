@@ -1,6 +1,6 @@
-FROM microsoft/dotnet:1.0.4-sdk
+FROM microsoft/dotnet:1.0.5-sdk
 LABEL maintainer "frank@pommerening-online.de"
-ENV REFRESHED_AT 2017-03-08
+ENV REFRESHED_AT 2017-05-21
 
 COPY WebApp /WebApp
 
