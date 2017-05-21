@@ -258,3 +258,5 @@ tools/
 
 tmp/
 /Samples/BuildOutside/dockerfiles/webapp/app
+/Samples/Webhook/dockerfiles/service/app
+/Samples/MongoMessage-Environment/dockerfiles/app
