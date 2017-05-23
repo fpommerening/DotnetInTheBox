@@ -40,8 +40,8 @@
 			<div class="slides">
 				<section >
 					<h1>.net in the box</h1>
-                	<h2>.NET User Group Koblenz</h2>
-					<h3>22.05.2017</h3>
+                	<h2>.NET Usergroup Rhein/Ruhr</h2>
+					<h3>24.05.2017</h3>
 					<img src="images/docker.png" style="height: 300px;border: 0px;background: transparent"/>
             	</section>
 <section>
@@ -1346,6 +1346,13 @@ var result =  await client.Containers.CreateContainerAsync(createParam);</code><
             	slideNumber: false,
             	margin: 0.0,
 				
+				multiplex: {
+                 // Example values. To generate your own, see the socket.io server instructions.
+                	secret: null, // null so the clients do not have control of the master presentation
+                 	id: '081a764b93256c5c', // id, obtained from socket.io server
+                	url: 'https://reveal-js-multiplex-ccjbegmaii.now.sh' // Location of socket.io server
+            	},
+					
 				menu: {
 					side: 'left',
 					
