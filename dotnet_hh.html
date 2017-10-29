@@ -1,0 +1,244 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>.NET in the big Box</title>
+
+    <meta name="description" content=".NET in the Box">
+    <meta name="author" content="Frank Pommerening">
+
+    <link rel="stylesheet" href="./common/css/reveal.css">
+    <link rel="stylesheet" href="./common/css/theme/black.css" id="theme">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="./common/lib/css/zenburn.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? './common/css/print/pdf.css' : './common/css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+
+    <style>
+        a.infolink {
+            width: 40px;
+            height: 40px;
+            display: inline-block;
+            background-image: url("images/about.svg");
+            background-size: cover;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <div class="slides">
+                <section>
+                    <h1>.net in the big box</h1>
+                    <h2>.NET User Group Hamburg</h2>
+                    <h3>01.11.2017</h3>
+                </section>
+                <section>
+                    <section>
+                      <h2>Frank Pommerening</h2>
+                      <img src="images/fp.jpg" style="border:0px;width:175px">
+                      <ul>
+                          <li>Senior - Softwareentwickler</li>
+                          <li>Consultant</li>
+                          <li>Softwarearchitekt</li>
+                      </ul>
+                      <br />
+                      <br />
+                      <a href="mailto:frank@pommerening-online.de">frank@pommerening-online.de</a>
+                  </section>
+                   <section data-background="images/axp.svg">
+                  
+                      AXP Consulting GmbH & Co. KG in Leipzig<br/>
+                      Gründung: Mai 2012 <br />
+                      Anzahl Mitarbeiter:	8 feste <br/>
+                      Branchenfokus: Energiebranche <br/>
+                      <br/>
+                      <br/>
+                      <ul>
+  
+                      <li>Consulting (fachlich & IT)
+  <ul>
+      <li>Requirements Engineering / Projektmanagement </li>
+      <li>IT-Fachprozess-Analyse / Dokumentation</li>
+  </ul>
+                      </li>
+                      <li>Software-Entwicklung
+                          <ul>
+                              <li>Microservices, SOA, REST, OOA und OOD</li>
+                               <li>Microsoft Technologien z.B. .NET (C#), WPF, WCF</li>
+  <li>Datenbanken (MS SQL Server / Oracle  / MongoDB)
+                              </ul>
+                          </li>
+                      </ul>
+                  </section>
+              </section>
+              <section>
+				<section>
+					<h2>Build .Net Core App</h2>
+					<img src="images/DockerDotNET.jpg" alt="Logo .net and docker" / style="border: 0; height: 500px">
+				</section>
+				<section>
+					<h3>Build inside</h3>
+					Die Anwendung wird im Container während der Imageerstellung gebaut.
+					<br />
+					<br />
+					<table>
+						<tbody>
+							<tr>
+								<th>Vorteile</th>
+								<th>Nachteile</th>
+							</tr>
+							<tr>
+								<td>
+									<ul>
+										<li>Buildserver nicht erforderlich</li>
+										<li>Weniger komplex</li>
+									</ul>
+								</td>
+								<td>
+									<ul>
+										<li>Quellcode und Buildabhängigkeiten ggf. im Image enthalten</li>
+										<li>Basisimage größer (SDK erforderlich)</li>
+										<li>i.d.R. entstehen größere Images</li>
+										<li>Buildfehler schwerer zu debuggen</li>
+									</ul>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</section>
+				<section>
+					<h3>Build outside</h3>
+					Die Anwendung wird unabhängig vom Container erstellt. Die entstandenen Artefakte werden bei der Imageerstellung kopiert.
+					<br />
+					<br />
+					<table>
+						<tbody>
+							<tr>
+								<th>Vorteile</th>
+								<th>Nachteile</th>
+							</tr>
+							<tr>
+								<td>
+									<ul>
+										<li>i.d.R. kleinere Images und Basisimages</li>
+										<li>Build unabhängig von der Imageestellung</li>
+										<li>Quellcode und Buildabhängigkeiten nicht enthalten</li>
+									</ul>
+								</td>
+								<td>
+									<ul>
+										<li>Infrastruktur für Build erforderlich</li>
+										<li>Trennung erzeugt Komplexität</li>
+									</ul>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</section>
+				<section>
+					<h3>Multi-Stage Build</h3>
+					Die Anwendung wird während der Imageerstellung in einem temporären Container gebaut.
+					Die entstandenen Artefakte werden in den finalen Container kopiert.
+					<table>
+						<tbody>
+							<tr>
+								<th>Vorteile</th>
+								<th>Nachteile</th>
+							</tr>
+							<tr>
+								<td>
+									<ul>
+										<li>i.d.R. kleinere Images und Basisimages</li>
+										<li>Buildserver nicht erforderlich</li>
+										<li>Quellcode und Buildabhängigkeiten nicht enthalten</li>
+									</ul>
+								</td>
+								<td>
+									<ul>
+										<li>komplexere Dockerfiles</li>
+										<li>Mehrere Quellimages (SDK / Runtime) erforderlich</li>
+										<li>Buildfehler schwerer zu debuggen</li>
+									</ul>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</section>
+			</section>
+            </div>
+        </div>
+
+        <script src="./common/lib/js/head.min.js"></script>
+        <script src="./common/js/reveal.js"></script>
+
+        <script>
+            // More info https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                center: true,
+                width: 1250,
+                height: 720,
+                slideNumber: false,
+                margin: 0.0,
+
+                multiplex: {
+                    // Example values. To generate your own, see the socket.io server instructions.
+                    secret: null, // null so the clients do not have control of the master presentation
+                    id: '7c26e85190d7d66f', // id, obtained from socket.io server
+                    url: 'https://reveal-js-multiplex-ccjbegmaii.now.sh' // Location of socket.io server
+                },
+
+                menu: {
+                    side: 'left',
+
+                    titleSelector: 'h1, h2, h3, h4, h5, h6',
+                    hideMissingTitles: false,
+                    markers: false,
+                    custom: false,
+                    themes: [
+                        { name: 'Black', theme: './common/css/theme/black.css' },
+                        { name: 'White', theme: './common/css/theme/white.css' }
+                    ],
+
+                    transitions: true,
+                    openButton: true,
+                    openSlideNumber: false,
+                    keyboard: true,
+                    sticky: false,
+                    autoOpen: true
+                },
+
+                // More info https://github.com/hakimel/reveal.js#dependencies
+                dependencies: [
+                    { src: './common/lib/js/classList.js', condition: function () { return !document.body.classList; } },
+                    { src: './common/plugin/markdown/marked.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+                    { src: './common/plugin/markdown/markdown.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+                    { src: './common/plugin/notes/notes.js', async: true },
+                    { src: './common/plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } },
+                    { src: './common/plugin/zoom-js/zoom.js', async: true },
+                    { src: './common/plugin/notes/notes.js', async: true },
+                    { src: '//cdn.socket.io/socket.io-1.3.5.js', async: true },
+                    { src: './common/plugin/multiplex/client.js', async: true },
+                    { src: './common/plugin/menu/menu.js', async: true }
+                ]
+            });
+        </script>
+</body>
+
+</html>
