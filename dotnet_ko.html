@@ -9,18 +9,18 @@
 		<meta name="description" content=".NET in the Box">
     	<meta name="author" content="Frank Pommerening">
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+		<link rel="stylesheet" href="./common/css/reveal.css">
+		<link rel="stylesheet" href="./common/css/theme/black.css" id="theme">
 
 		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<link rel="stylesheet" href="./common/lib/css/zenburn.css">
 
 		<!-- Printing and PDF exports -->
 		<script>
 			var link = document.createElement( 'link' );
 			link.rel = 'stylesheet';
 			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? './common/css/print/pdf.css' : './common/css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
 
@@ -1331,8 +1331,8 @@ var result =  await client.Containers.CreateContainerAsync(createParam);</code><
 			</div>
 		</div>
 	
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
+		<script src="./common/lib/js/head.min.js"></script>
+		<script src="./common/js/reveal.js"></script>
 
 		<script>
 			// More info https://github.com/hakimel/reveal.js#configuration
@@ -1354,8 +1354,8 @@ var result =  await client.Containers.CreateContainerAsync(createParam);</code><
 					markers: false,
 					custom: false,
 					themes: [
-						{ name: 'Black', theme: 'css/theme/black.css' },
-						{ name: 'White', theme: 'css/theme/white.css' }
+						{ name: 'Black', theme: './common/css/theme/black.css' },
+						{ name: 'White', theme: './common/css/theme/white.css' }
 						],
 
 					transitions: true,
@@ -1368,16 +1368,16 @@ var result =  await client.Containers.CreateContainerAsync(createParam);</code><
 
 				// More info https://github.com/hakimel/reveal.js#dependencies
 				dependencies: [
-					{ src: 'lib/js/classList.js', condition: function () { return !document.body.classList; } },
-					{ src: 'plugin/markdown/marked.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
-					{ src: 'plugin/markdown/markdown.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-                    { src: 'plugin/zoom-js/zoom.js', async: true },
-                    { src: 'plugin/notes/notes.js', async: true },
+					{ src: './common/lib/js/classList.js', condition: function () { return !document.body.classList; } },
+					{ src: './common/plugin/markdown/marked.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+					{ src: './common/plugin/markdown/markdown.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+					{ src: './common/plugin/notes/notes.js', async: true },
+					{ src: './common/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: './common/plugin/zoom-js/zoom.js', async: true },
+                    { src: './common/plugin/notes/notes.js', async: true },
                     { src: '//cdn.socket.io/socket.io-1.3.5.js', async: true },
-                    { src: 'plugin/multiplex/client.js', async: true },
-					{ src: 'plugin/menu/menu.js', async: true}
+                    { src: './common/plugin/multiplex/client.js', async: true },
+					{ src: './common/plugin/menu/menu.js', async: true}
 				]
 			});
 		</script>
