@@ -178,7 +178,415 @@
 						</tbody>
 					</table>
 				</section>
+            </section>
+            <section>
+				<section>
+					<h2>Build / Integration Dockerhub</h2>
+				</section>
+				<section>
+					Die Verknüpfung von GitHub und Docker Hub gestattet eine automatische Erstellung der Container mit jeder Codeänderung.
+					<img src="images/githubdockerhub.svg" alt="schema flow github and dockerhub" style="border: 0" /> Voraussetzungen:
+					<ul>
+						<li>Accounts bei GitHub und Docker Hub existieren</li>
+						<li>Quellcode inkl. Dockerfile ist in einem Repository auf GitHub vorhanden</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Verbindung GitHub und Docker Hub</h3>
+					<ol start="1">
+						<li>Login bei Docker Hub</li>
+						<li>Profil -> Setting -> Linked Accounts & Services</li>
+					</ol>
+					<img src="images/gitdocker_01.png" style="height: 350px" />
+				</section>
+				<section>
+					<ol start="3">
+						<li>Auswahl des Zugriffs</li>
+					</ol>
+					<br />
+					<img src="images/gitdocker_02.png" style="height: 500px" />
+				</section>
+				<section>
+					<ol start="4">
+						<li>Autorisierung des Zugriffs</li>
+						<li>Bestätigung mit GitHub-Kennwort</li>
+					</ol>
+					<br />
+					<img src="images/gitdocker_03.png" style="height: 400px" />
+					<img src="images/gitdocker_04.png" style="height: 250px" />
+				</section>
+				<section>
+					<h3>Automatischer Build</h3>
+					<ol>
+						<li>Login bei Docker Hub</li>
+						<li>Create -> Create Automated Build</li>
+						<li>Auswahl Herkunft Quellcode (GitHub oder Bitbucket)</li>
+					</ol><br />
+					<img src="images/gitdocker_05.png" style="height: 400px" />
+				</section>
+				<section>
+					<ol start="4">
+						<li>Auswahl des Quell-Repository</li>
+					</ol>
+					<img src="images/gitdocker_06.png" style="height: 250px" />
+
+				</section>
+				<section>
+					<ol start="5">
+						<li>Konfiguration Docker Hub-Repository
+							<ul>
+								<li>Namespace (Fix: Benutzer)</li>
+								<li>Name (Default: Name des GitHub-Repository)</li>
+								<li>Sichtbarkeit (Default: Öffentlich)</li>
+								<li>Kurzbeschreibung (Pflichtfeld)</li>
+							</ul>
+						</li>
+					</ol>
+					<br />
+					<img src="images/gitdocker_07.png" style="height: 400px" />
+				</section>
+				<section>
+					<ol start="6">
+						<li>Anpassung Build-Einstellungen (Build-Settings)
+							<ul>
+								<li>Pfad zum Dockerfile</li>
+								<li>Definition Tags</li>
+								<li>Verwendete Git-Branches</li>
+							</ul>
+						</li>
+					</ol>
+					<img src="images/gitdocker_08.png" style="height: 400px" />
+				</section>
+				<section>
+					<ol start="7">
+						<li>Prüfung Build (Build Details)</li>
+					</ol>
+					<img src="images/gitdocker_09.png" style="height: 400px" />
+				</section>
 			</section>
+			<section>
+				<section>
+					<h2>Visual Studio Team Services</h2>
+					<h3>Cloudbasierte Komplettlösung für Entwickler von Microsoft</h3>
+				</section>
+				<section>
+					Die Build-Defintion erfolgt über ein Webportal.
+Die kostenfrei bereitgestellten Build-Agents werden in Windows-Umgebungen auf Azure ausgeführt.
+Sie erlauben keine Erstellung von Docker-Container. Dafür muss ein eigener externer Build-Agent bzw. Docker-Host bereitgestellt werden.
+<br />
+<br />
+<a href="https://www.visualstudio.com/de/vso/" target="_blank">Zugang / Anmeldung</a> (per Live-ID)
+				</section>
+				<section>
+					<h3>Erstellung Personal Access Token</h3>
+Der Personal Access Tokel erlaubt dem Build-Agent die Authentifizierung gegenüber den Visual Studio Team Services.
+<div style="border:0px;height:500px;">
+		<img src="images/vsts_access_tokens.png" class="fragment current-visible" alt="Create personal access token step 1" style="border:0px;margin-left:250px;margin-top:50px">
+		<img src="images/vsts_access_token.png" class="fragment " alt="Create personal access token step 2" style="border:0px">
+		<img src="images/vsts_access_created.png" class="fragment" alt="Create personal access token step 2" style="border:0px">
+</div>
+				</section>
+				<section>
+					<h3>Starten des Build-Agent</h3>
+						<pre><code class="docker">docker run -e VSTS_ACCOUNT=username
+	-e VSTS_TOKEN=personal_access_token
+	-v /var/run/docker.sock:/var/run/docker.sock
+	-it microsoft/vsts-agent</code></pre>
+Optional:<br />
+<ul>
+	<li>VSTS_POOL ("Default")</li>
+	<li>VSTS_AGENT ($(hostname))</li>
+</ul>
+<br />
+<br />
+Je nach Umgebung z.B. TFS 2017 werden spezielle <a href="https://hub.docker.com/r/microsoft/vsts-agent/" target="_blank">Tags</a> benötigt.
+				</section>
+				<section>
+					<h3>Defintion Build </h3>
+					Beispiel: Erstellung einer .NET Core 2 Anwendung mit den Container-Erstellung und Veröffentlichung auf Dockerhub.
+					<br />
+					<br />
+					<h4>Herkunft für Quellcode</h4>
+					<ul>
+						<li>Visual Studio Team Services</li>
+						<li>GitHub</li>
+						<li>Bitbucket</li>
+						<li>externe Git-Repos</li>
+						<li>externe Subversion-Repos</li>
+					</ul>
+				</section>
+				<section>
+					<h4>Auswahl Vorlage</h4>
+					<img src="images/vsts_build_04.png" style="border:0px;">
+					<br />
+					Auswahl: Empty process
+				</section>
+				<section>
+						<h4>Defintion Name / Build-Agent</h4>
+						<img src="images/vsts_build_01.png" style="border:0px"><br />
+						Eigenen Build-Agents werden in der Agent queue <i>Default</i> angelegt.
+				</section>
+				<section>
+					<h4>.NET Core Schritte</h4>
+					<img src="images/vsts_build_02.png" style="border:0px"><br />
+					<img src="images/vsts_build_03.png" style="border:0px"><br />
+				</section>
+				<section>
+						<h4>.NET Core Restore</h4>
+						<img src="images/vsts_build_05.png" style="border:0px"><br />
+						 Angabe der Projekt(e) oder alle mit **/*.csproj
+				</section>
+				<section>
+						<h4>.NET Core Build</h4>
+						<img src="images/vsts_build_06.png" style="border:0px"><br />
+				</section>
+				<section>
+						<h4>.NET Core Publish</h4>
+						<img src="images/vsts_build_07.png" style="border:0px;float:left;margin:20px" ><br />
+						Angabe eines Unterordner unterhalb des Ausgabeordners ist für Docker-Build erforderlich.
+				</section>
+				<section>
+					<h4>Kopieren des Dockerfile</h4>
+					<img src="images/vsts_build_08.png" style="border:0px;float:left;margin:20px">
+					Das Dockerfile wird vom Quellenordner in den Ausgabeordner kopiert. So liegt es im Build-Context.
+				</section>
+				<section>
+						<h4>Ausführung Docker-Build</h4>
+						<img src="images/vsts_build_09.png" style="border:0px; height:580px;margin-right:10px;float:left"><br />
+						<p style="text-align:left">
+							Docker File: <br/>
+							Ausgabeordner/Dockerfile<br/><br/>
+							Image Name: <br/>
+							User/Repo/Build-ID<br/><br/>
+							Optional:<br/>
+							Include Latest Tag
+						</p>
+				</section>
+				<section>
+						<h4>Docker Registry Connection</h4>
+						<img src="images/vsts_docker_login.png" style="border:0px;float:left"><br />
+						Verwendung<br />
+						<ul>
+							<li>Abruf privater Images</li>
+							<li>Push von erstellten Images</li>
+						</ul>
+						<br />
+						<br />
+						Neben dem Docker Hub kann auch eine private Registry verbunden werden.
+				</section>
+				<section>
+						<h4>Push zum Docker</h4>
+						<img src="images/vsts_build_10.png" style="border:0px;height:580px;margin-right:20px; float:left">
+							Container Registry Type:<br />
+							<ul>
+								<li>Container Registry (Docker)</li>
+								<li>Azure Container Registry</li>
+							</ul>
+							<br />
+							<br />
+							Docker Registry Connection:<br />
+							neu erstellen / bestehende wählen
+							<br />
+							<br />
+							Imagename: siehe Build-Einstellung<br />
+							<br />
+							Optional: Include Latest Tag
+				</section>
+				<section>
+						<h4>Bereinigung der erstellten Images</h4>
+						<img src="images/vsts_build_11.png" style="border:0px;height:580px;margin-right:20px; float:left"><br/>
+						Löschen von Images ist keine vordefinierte Aktion deshalb generische Aktion <i>Run a Docker Command</i> wählen.
+						<br/> <br/>
+						Befehl: <br/>
+						rmi user/repo/build-ID user/repo:latest
+
+
+				</section>
+            </section>
+            <section>
+				<section>
+					<h2>Docker Swarm / Docker Swarm Mode</h2>
+					<img src="images/swarmlogo.jpg" style="width: 300px;border: 0" />
+					<p class="fragment">Container-Cluster über mehrere Docker-Hosts</p>
+				</section>
+				<section>
+					<h3>Docker Swarm Visualizer</h3>
+					<p style="text-align: left">
+						Das Tool Docker Swarm Visualizer gestattet eine Übersicht der laufenden Services und Hosts.
+						<img src="images/visualizer.png" style="border: 0;height: 350px;float:right">
+						<br />
+						<br /> Lizenz: Apache <a href="https://github.com/dockersamples/docker-swarm-visualizer" target="_blank">GitHub</a>
+						<br />
+						<br /> Verfügbare Container:<br />
+						<ul>
+							<li>Linux x64: <a href="https://hub.docker.com/r/dockersamples/visualizer/" target="_blank">dockersamples/visualizer</a></li>
+							<li>Linux arm: <a href="https://hub.docker.com/r/alexellis2/visualizer-arm/" target="_blank">alexellis2/visualizer-arm</a></li>
+							<li>Windows: <a href="https://hub.docker.com/r/stefanscherer/visualizer-windows/" target="_blank">stefanscherer/visualizer-windows</a></li>
+						</ul>
+					</p>
+				</section>
+				<section>
+					<h3>Docker Swarm <a href="https://docs.docker.com/engine/reference/commandline/swarm/" target="_blank" class="infolink"></a>						</h3>
+					<h4>Cluster / Swarm initalisieren</h4>
+					<pre><code class="docker">docker swarm init [OPTIONS] </code></pre>
+					<p style="text-align: left">
+						Nach erfolgreicher Erstellung werden der Token und Befehl zum Hinzufügen angezeigt.
+					</p>
+					<h4>Knoten hinzufügen</h4>
+					<pre><code class="docker">docker swarm join [OPTIONS] HOST:PORT</code></pre>
+					<p style="text-align: left">
+						-- token Zugriffstoken
+					</p>
+
+				</section>
+				<section>
+					<h4>Knoten entfernen</h4>
+					<pre><code class="docker">docker swarm leave [OPTIONS]</code></pre>
+					<p style="text-align: left">
+						--force, -f Erzwingt das Verlassung und ignoriert Warnungen WICHTIG: die Node muss noch mein Manager abgemeldet werden!
+					</p>
+					<h4>Zugriffstoken anzeigen</h4>
+					<pre><code class="docker">docker swarm join-token [OPTIONS] (worker|manager)</code></pre>
+					<h4>Cluster / Swarm aktualsieren</h4>
+					<pre><code class="docker">docker swarm Update [OPTIONS]</code></pre>
+				</section>
+				<section>
+					<h3>Docker Node <a href="https://docs.docker.com/engine/reference/commandline/node/" targe="_blank" class="infolink"></a></h3>
+					<h4>Knoten anzeigen</h4>
+					<pre><code class="docker">docker node ls [OPTIONS]</code></pre>
+					<h4>Detailierte Informationen zu / zum Knoten anzeigen</h4>
+					<pre><code class="docker">docker node inspect [OPTIONS] self|NODE </code></pre>
+					<h4>Aufgaben / Prozesse eines Knoten anzeigen</h4>
+					<pre><code class="docker">docker node ps [OPTIONS] [NODE] </code></pre>
+					<h4>Knoten aus dem Cluster entfernen</h4>
+					<pre><code class="docker">docker node rm [OPTIONS] Node</code></pre>
+				</section>
+				<section>
+					<h4>Knoten vom Worker zum Manager heraufstufen</h4>
+					<pre><code class="docker">docker node promote NODE</code></pre>
+					<h4>Knoten vom Manager zum Worker herabstufen</h4>
+					<pre><code class="docker">docker node demote NODE</code></pre>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2>Docker Swarm - Services</h2>
+				</section>
+				<section>
+					Anwendungen die Cluster bereitgestellt werden, werden als Services bezeichnet. Um den Service auf mehreren Nodes bereitzustellen,
+					muss das Image in einer Registry abgelegt sein.
+					<br />
+					<h4>Service erstellen <a href="https://docs.docker.com/engine/reference/commandline/service_create/" target="_blank" class="infolink"></a></h4>
+					<pre><code class="docker">docker service create [OPTIONS] IMAGE [COMMAND] [ARG...]</code></pre>
+					<table>
+						<tbody>
+							<tr>
+								<td>--name</td>
+								<td>Name für den Service</td>
+							</tr>
+							<tr>
+								<td>--network</td>
+								<td>Verwendetes Netzwerk</td>
+							</tr>
+							<tr>
+								<td>--publish, -p</td>
+								<td>Veröffentlicht den Port</td>
+							</tr>
+							<tr>
+								<td>--replicas</td>
+								<td>Zahl der gleichzeitig laufenden Instanzen</td>
+							</tr>
+						</tbody>
+					</table>
+				</section>
+				<section>
+					<h4>Services entfernen <a href="https://docs.docker.com/engine/reference/commandline/service_rm/" target="_blank" class="infolink"></a></h4>
+					<pre><code class="docker">docker service rm SERVICE</code></pre>
+					<h4>Services anzeigen <a href="https://docs.docker.com/engine/reference/commandline/service_ls/" target="_blank" class="infolink"></a></h4>
+					<pre><code class="docker">docker service ls [OPTIONS] </code></pre>
+					<h4>Details zu / zum Services anzeigen <a href="https://docs.docker.com/engine/reference/commandline/service_inspect/" target="_blank"
+						 class="infolink"></a></h4>
+					<pre><code class="docker">docker service inspect [OPTIONS] SERVICE</code></pre>
+					<h4>Services hoch/runter skalieren <a href="https://docs.docker.com/engine/reference/commandline/service_scale/" target="_blank"
+						 class="infolink"></a></h4>
+					<pre><code class="docker">docker service scale SERVICE=ANZAHL</code></pre>
+					<h4>Logs eines Services anzeinge <a href="https://docs.docker.com/engine/reference/commandline/service_logs/" target="_blank"
+						 class="infolink"></a></h4>
+					<pre><code class="docker">docker service logs [OPTIONS] SERVICE</code></pre>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2>Docker Swarm mit <br /> Docker-Compose / Docker-Stack</h2>
+				</section>
+				<section>
+					Docker-Stack ist Teil des Docker-Engine selbst. <br/>Docker-Compose muss u.a. unter Linux manuell installiert werden.
+					<br />
+					<br />
+					Die Dateistruktur ist ab identisch (V3+). Docker-Compose ignorierte bestimmte Einstellungen.
+					<br />
+					<br />
+					Docker-Stack kann nur auf einem Docker-Host der Teil eines Swarm (Cluster) ist ausgeführt werden.
+				</section>
+				<section>
+						<h4>Stack bereitstellen <a href="https://docs.docker.com/engine/reference/commandline/stack_deploy/" target="_blank" class="infolink"></a></h4>
+						<pre><code class="docker">docker stack deploy [OPTIONS] STACK</code></pre>
+						<table>
+								<tbody>
+									<tr>
+										<td>-compose-file , -c</td>
+										<td>Name / Pfad zum Compose-File</td>
+									</tr>
+								</tbody>
+						</table>
+						<h4>Stack entfernen <a href="https://docs.docker.com/engine/reference/commandline/stack_rm/" target="_blank" class="infolink"></a></h4>
+						<pre><code class="docker">docker stack rm STACK</code></pre>
+						<h4>Stacks anzeigen <a href="https://docs.docker.com/engine/reference/commandline/stack_ls/" target="_blank" class="infolink"></a></h4>
+						<pre><code class="docker">docker stack ls</code></pre>
+						<h4>Services eines Stacks anzeigen <a href="https://docs.docker.com/engine/reference/commandline/stack_services/" target="_blank" class="infolink"></a></h4>
+						<pre><code class="docker">docker stack services [OPTIONS] STACK</code></pre>
+				</section>
+            </section>
+
+            <section>
+                <section>
+					<h2>Docker Swarm - Multiarchitektur</h2>
+				</section>
+                <section>
+
+                Docker-Swarm verknüpft verschiedene Architekturen:<br />
+                <ul>
+                    <li>x64  / ARM</li>
+                    <li>Linux / Windows </li>
+                </ul><br />
+                <br />
+                Über Label können die Knoten gekennzeichnet werden. Informationen wie das OS bzw. die CPU-Architektur sind bereits vorhanden.
+                <h4>Label setzen <a href="https://docs.docker.com/engine/swarm/manage-nodes/#add-or-remove-label-metadata" target="_blank" class="infolink"></a></h4>
+                <pre><code class="docker">docker node update --label-add KEY[=VALUE]</code></pre>
+                <h4>Label entfernen <a href="https://docs.docker.com/engine/swarm/manage-nodes/#add-or-remove-label-metadata" target="_blank" class="infolink"></a></h4>
+                <pre><code class="docker">docker node update --label-rm KEY</code></pre>
+            </section>
+            <section>
+                <h3>Einschränkungen</h3>
+                <h4>Service-Defintion </h4>
+                <pre><code class="docker">docker service create --name myservice 
+--constraint 'node.labels.type == web' myimage:latest </code></pre>
+                <h4>Stack-Definition (Compose-File)</h4>
+                <pre><code class="docker">
+version: "3.2"
+services:
+myservice:
+ image: myimage:latest
+ deploy:
+    placement:
+       constraints:
+          - 'node.role == manager'
+          - 'node.platform.os == linux'
+          - 'node.labels.type == web'</code></pre>										
+                </section>
+            </section>
+
+
             </div>
         </div>
 
