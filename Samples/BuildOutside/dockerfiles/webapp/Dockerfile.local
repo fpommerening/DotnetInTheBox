@@ -1,6 +1,6 @@
-FROM microsoft/dotnet:1.0.5-core
+FROM microsoft/aspnetcore:2.0-jessie
 LABEL maintainer "frank@pommerening-online.de"
-ENV REFRESHED_AT 2017-05-21
+ENV REFRESHED_AT 2017-10-02
 
 
 COPY /app /home/
@@ -10,5 +10,6 @@ RUN set -x \
     && tar -xzf /home/webapp.tar.gz -C /app/
 	
 WORKDIR /app/
+ENV ASPNETCORE_URLS http://0.0.0.0:4000
 EXPOSE 4000
-ENTRYPOINT ["dotnet", "WebApp.dll"]
+ENTRYPOINT ["dotnet", "BuildOutside.dll"]

@@ -1,20 +1,18 @@
-﻿using System.IO;
+﻿using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 
 namespace FP.DotnetInTheBox.BuildOutside
 {
-    public class Program
+    class Program
     {
-        public static void Main(string[] args)
+        static void Main(string[] args)
         {
-            var host = new WebHostBuilder()
-               .UseContentRoot(Directory.GetCurrentDirectory())
-               .UseKestrel()
-               .UseStartup<Startup>()
-               .UseUrls("http://0.0.0.0:4000")
-               .Build();
-
-            host.Run();
+            BuildWebHost(args).Run();
         }
+
+          public static IWebHost BuildWebHost(string[] args) =>
+            WebHost.CreateDefaultBuilder(args)
+                .UseStartup<Startup>()
+                .Build();
     }
 }
