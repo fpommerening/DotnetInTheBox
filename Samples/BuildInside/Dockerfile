@@ -1,10 +1,11 @@
-FROM microsoft/dotnet:1.0.5-sdk
+FROM microsoft/dotnet:2.0.0-sdk-jessie
 LABEL maintainer "frank@pommerening-online.de"
-ENV REFRESHED_AT 2017-05-21
+ENV REFRESHED_AT 2017-10-29
+
+ENV ASPNETCORE_URLS http://0.0.0.0:5000
+EXPOSE 5000
 
 COPY WebApp /WebApp
-
 RUN cd /WebApp && dotnet restore && dotnet build
 WORKDIR /WebApp
-EXPOSE 5000
 ENTRYPOINT ["dotnet", "run"]
