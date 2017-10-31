@@ -8,21 +8,20 @@ services:
       placement:
         constraints:
            - 'node.platform.arch == x86_64'
-    webapp:
-    image: 192.168.2.127:5000/gruppe1/mongomessage:x64
+  webX64:
+    image: fpommerening/devopenspace2017:mongomessage
     ports:
-      - 5000:5000
+        - 5000:5000
     networks:
-      - mongomessage
+        - mongomessage
     depends_on:
-      - messagedb
+        - messagedb
     deploy:
       placement:
         constraints:
           - 'node.platform.arch == x86_64'
-    environment:
-     - MessageConnectionString=mongodb://messagedb  
-
+      environment:
+        - MessageConnectionString=mongodb://messagedb  
   webArm:
     image: fpommerening/dotnetinthebox:raspi
     ports:
