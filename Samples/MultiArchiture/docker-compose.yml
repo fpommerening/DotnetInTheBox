@@ -1,0 +1,39 @@
+version: "3.2"
+services:
+  messagedb:
+    image: mongo:3.4.9-jessie
+    networks:
+      - mongomessage
+    deploy:
+      placement:
+        constraints:
+           - 'node.platform.arch == x86_64'
+    webapp:
+    image: 192.168.2.127:5000/gruppe1/mongomessage:x64
+    ports:
+      - 5000:5000
+    networks:
+      - mongomessage
+    depends_on:
+      - messagedb
+    deploy:
+      placement:
+        constraints:
+          - 'node.platform.arch == x86_64'
+    environment:
+     - MessageConnectionString=mongodb://messagedb  
+
+  webArm:
+    image: fpommerening/dotnetinthebox:raspi
+    ports:
+      - 5001:5000
+    networks:
+      - mongomessage
+    deploy:
+      placement:
+        constraints:
+          - 'node.platform.arch == armv7l'
+        platforms:
+         - 'Architecture' : 'armv7l'
+networks:
+  mongomessage:
