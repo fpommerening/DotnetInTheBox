@@ -32,7 +32,5 @@ services:
       placement:
         constraints:
           - 'node.platform.arch == armv7l'
-        platforms:
-         - 'Architecture' : 'armv7l'
 networks:
   mongomessage:
