@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace FP.DotnetInTheBox.RaspberryPi.Modules
 {
@@ -6,11 +6,7 @@ namespace FP.DotnetInTheBox.RaspberryPi.Modules
     {
         public HomeModule()
         {
-            Get["/"] = args =>
-            {
-                return $".net in a box (on arm) \n# {DateTime.Now} \n#  {System.Net.Dns.GetHostName()}";
-
-            };
+            Get("/", args => $".net in a box (on arm) \n# {DateTime.Now} \n#  {System.Net.Dns.GetHostName()}");
         }
     }
 }

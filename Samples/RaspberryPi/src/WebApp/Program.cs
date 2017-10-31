@@ -1,6 +1,5 @@
-﻿using System;
-using System.Threading;
-using Nancy.Hosting.Self;
+﻿using Microsoft.AspNetCore;
+using Microsoft.AspNetCore.Hosting;
 
 namespace FP.DotnetInTheBox.RaspberryPi
 {
@@ -8,21 +7,12 @@ namespace FP.DotnetInTheBox.RaspberryPi
     {
         static void Main(string[] args)
         {
-            try
-            {
-                using (var host = new NancyHost(new Uri("http://localhost:7777")))
-                {
-                    host.Start();
-                    Console.WriteLine("Starting WebApp on Url http://localhost:7777");
-                    while (Console.ReadLine() != "quit") { Thread.Sleep(Int32.MaxValue); }
-                }
-
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex);
-            }
+            BuildWebHost(args).Run();
         }
 
+         public static IWebHost BuildWebHost(string[] args) =>
+            WebHost.CreateDefaultBuilder(args)
+                .UseStartup<Startup>()
+                .Build();
     }
 }
