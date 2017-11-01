@@ -3,7 +3,7 @@ Verwendung von Environment-Variablen zur Konfiguration der Anwendung.
 
 Build: build.ps1
 
-Starten per Compose: /dockerfiles/docker-compose.yml
+Starten per Compose: /docker-compose.yml
 
 Starten im Cluster:<br />
 1) Netzwerk anlegen: docker network create --attachable -d overlay mongomsg

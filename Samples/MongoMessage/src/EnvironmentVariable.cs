@@ -1,6 +1,6 @@
-﻿using System.Collections;
+using System.Collections;
 
-namespace FP.DotnetInTheBox.Environment
+namespace FP.DotnetInTheBox.MongoMessage
 {
     public class EnvironmentVariable
     {
@@ -10,11 +10,9 @@ namespace FP.DotnetInTheBox.Environment
             {
                 if (de.Key?.ToString() == key)
                 {
-                 //   Console.WriteLine($"GetEnvVar {key} - {de.Value}");
                     return de.Value.ToString();
                 }
             }
-            //Console.WriteLine($"GetEnvVar {key} - default - {defaultValue}");
             return defaultValue;
         }
     }

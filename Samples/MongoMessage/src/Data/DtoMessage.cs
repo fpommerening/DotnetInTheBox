@@ -1,8 +1,8 @@
-﻿using System;
+using System;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 
-namespace FP.DotnetInTheBox.Environment.Data
+namespace FP.DotnetInTheBox.MongoMessage.Data
 {
     public class DtoMessage
     {

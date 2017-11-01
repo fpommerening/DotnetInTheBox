@@ -1,11 +1,12 @@
-﻿using System.Threading.Tasks;
-using FP.DotnetInTheBox.Environment.Data;
-using FP.DotnetInTheBox.Environment.Model;
+using System.Threading.Tasks;
+using FP.DotnetInTheBox.MongoMessage.Data;
+using FP.DotnetInTheBox.MongoMessage.Modell;
+using Nancy;
 using Nancy.ModelBinding;
 
-namespace FP.DotnetInTheBox.Environment.Modules
+namespace FP.DotnetInTheBox.MongoMessage.Module
 {
-    public class MessageModule : Nancy.NancyModule
+    public class MessageModule : NancyModule
     {
         public MessageModule(MessageRepository messageRepo)
         {

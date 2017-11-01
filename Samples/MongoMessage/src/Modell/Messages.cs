@@ -1,6 +1,6 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 
-namespace FP.DotnetInTheBox.Environment.Model
+namespace FP.DotnetInTheBox.MongoMessage.Modell
 {
     public class Messages
     {

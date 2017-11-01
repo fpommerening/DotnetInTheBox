@@ -1,10 +1,10 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using MongoDB.Bson;
 using MongoDB.Driver;
 
-namespace FP.DotnetInTheBox.Environment.Data
+namespace FP.DotnetInTheBox.MongoMessage.Data
 {
     public class MessageRepository
     {

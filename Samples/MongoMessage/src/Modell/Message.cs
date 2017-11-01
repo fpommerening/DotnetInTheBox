@@ -1,6 +1,6 @@
-﻿using System;
+using System;
 
-namespace FP.DotnetInTheBox.Environment.Model
+namespace FP.DotnetInTheBox.MongoMessage.Modell
 {
     public class Message
     {
