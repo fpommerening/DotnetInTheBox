@@ -1,0 +1,7 @@
+@Each
+<tr>
+<td>@Current.Timestamp</td>
+<td>@Current.UserName</td>
+<td>@Current.Content</td>
+</tr>
+@EndEach

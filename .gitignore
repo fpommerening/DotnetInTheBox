@@ -17,6 +17,7 @@
 [Rr]eleases/
 x64/
 x86/
+
 bld/
 [Bb]in/
 [Oo]bj/
@@ -250,3 +251,12 @@ paket-files/
 # JetBrains Rider
 .idea/
 *.sln.iml
+
+# CAKE Build
+tools/
+
+
+tmp/
+/Samples/BuildOutside/dockerfiles/webapp/app
+/Samples/Webhook/dockerfiles/service/app
+/Samples/MongoMessage-Environment/dockerfiles/app

@@ -1,0 +1,29 @@
+@Master['MasterPage']
+
+
+@Section['Content']
+
+<form action="~/message/" method="post" >
+<table>
+<tr>
+	<td>Benutzer</td>
+	<td><input type="text" name="UserName" id="UserName"/></td>
+</tr>
+<tr>
+	<td colspan="2">Meldung</td>
+</tr>
+<tr>
+	<td colspan="2">
+	<textarea rows="4" cols="100" name="Content"  id="Content">
+	</textarea>
+	</td>
+</tr>
+<tr>
+	<td></td>
+	<td><input type="submit"></td>
+</tr>
+</table>
+</form>
+	
+
+@EndSection

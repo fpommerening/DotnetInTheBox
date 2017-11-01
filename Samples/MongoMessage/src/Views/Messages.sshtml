@@ -1,0 +1,18 @@
+@Master['MasterPage']
+
+@Section['Content']
+
+<h1>Nachrichten</h1>
+<a href="/Message/">Neue Nachricht</a>
+<br/>
+<table border="1">
+<tr>
+<th>Zeitpunkt</th>
+<th>Benutzer</th>
+<th>Nachricht</th>
+</tr>
+
+@Partial['entries', Model.Entries];
+</table>
+
+@EndSection

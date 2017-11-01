@@ -1,0 +1,15 @@
+FROM microsoft/aspnetcore:2.0-jessie
+LABEL maintainer "frank@pommerening-online.de"
+ENV REFRESHED_AT 2017-10-02
+
+
+COPY /app /home/
+
+RUN set -x \
+	&& mkdir /app/ \
+    && tar -xzf /home/webapp.tar.gz -C /app/
+	
+WORKDIR /app/
+ENV ASPNETCORE_URLS http://0.0.0.0:4000
+EXPOSE 4000
+ENTRYPOINT ["dotnet", "BuildOutside.dll"]

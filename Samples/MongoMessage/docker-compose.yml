@@ -1,0 +1,18 @@
+version: "3.2"
+services:
+    messagedb:
+        image: mongo:3.4
+        networks:
+            - mongomessage
+    webapp:
+        image: fpommerening/dotnetinthebox:mongomessage
+        ports:
+            - 4000:5000
+        networks:
+            - mongomessage
+        depends_on:
+            - messagedb
+        environment:
+            - MessageConnectionString=mongodb://messagedb
+networks:
+    mongomessage:
