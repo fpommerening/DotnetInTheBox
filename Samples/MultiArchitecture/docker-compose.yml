@@ -20,7 +20,7 @@ services:
       placement:
         constraints:
           - 'node.platform.arch == x86_64'
-      environment:
+    environment:
         - MessageConnectionString=mongodb://messagedb  
   webArm:
     image: fpommerening/dotnetinthebox:raspi
