@@ -1,9 +1,9 @@
-FROM microsoft/dotnet:2.0.0-sdk-jessie AS builder
+FROM 
 
 WORKDIR /WebApp
 COPY WebApp /WebApp
-RUN dotnet restore BuildMultistage.csproj
-RUN dotnet publish --configuration Release --output ./app
+#RUN dotnet restore BuildMultistage.csproj
+#RUN dotnet publish --configuration Release --output ./app
 
 
 
@@ -13,7 +13,7 @@ ENV REFRESHED_AT 2017-09-23
 
 WORKDIR /app
 
-COPY --from=builder /WebApp/app/* ./
+##COPY 
 
 ENV ASPNETCORE_URLS http://0.0.0.0:5000
 EXPOSE 5000

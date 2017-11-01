@@ -9,7 +9,7 @@ services:
         constraints:
            - 'node.platform.arch == x86_64'
   webX64:
-    image: fpommerening/devopenspace2017:mongomessage
+    image: fpommerening/dotnetinthebox:mongomessage
     ports:
         - 5000:5000
     networks:
