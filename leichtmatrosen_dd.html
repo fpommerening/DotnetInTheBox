@@ -640,35 +640,48 @@ ENTRYPOINT ["dotnet", "WebApp.dll"]
 					Versionen / Formate: Ohne Angabe im Header gilt Version 1!
 					 <a href="https://docs.docker.com/compose/compose-file/compose-versioning/" target="_blank" class="infolink"></a>
 					<br /> 
-<table>
-	 <tbody>
-		 <tr>
-			 <th >Format / Version</th>
-			 <th >Docker-Version</th>
-			 <th>Hinweise</th>
-		 </tr>
-		 <tr>
-			 <td>3.0; 3.1</td>
-			 <td>1.13.0+</td>
-			 <td>Empfohlene Version (Erlaubt Verknüpfung mit Docker Swarm Mode)</td>
-		 </tr>
-		 <tr>
-			 <td>2.1</td>
-			 <td>1.12.0+</td>
-			 <td></td>
-		 </tr>
-		 <tr>
-			 <td>2.0</td>
-			 <td>1.10.0+</td>
-			 <td></td>
-		 </tr>
-		 <tr>
-			 <td>1.0</td>
-			 <td>1.9.1+</td>
-			 <td>in zukünftiger Version deprecated / veraltet</td>
-		 </tr>
-</tbody>
-</table>
+
+				</section>
+				<section>
+					<table>
+						<tbody>
+							<tr>
+								<th >Format / Version</th>
+								<th >Docker-Version</th>
+								<th>Hinweise</th>
+							</tr>
+							<tr>
+								<td>3.5</td>
+								<td>17.12.0+</td>
+								<td>Isolation</td>
+							</tr>
+							<tr>
+								<td>3.3</td>
+								<td>17.06.0+</td>
+								<td>Config / Secrets</td>
+							</tr>
+							<tr>
+								<td>3.0<br/> 3.1<br/>3.2</td>
+								<td>1.13.0+<br/>1.13.1+<br/>17.04.0+</td>
+								<td>Empfohlene Version <br />Erlaubt Verknüpfung mit Docker Swarm</td>
+							</tr>
+							<tr>
+								<td>2.1</td>
+								<td>1.12.0+</td>
+								<td>Healthcheck</td>
+							</tr>
+							<tr>
+								<td>2.0</td>
+								<td>1.10.0+</td>
+								<td>Networks, Dependency</td>
+							</tr>
+							<tr>
+								<td>1.0</td>
+								<td>1.9.1+</td>
+								<td>in zukünftiger Version deprecated / veraltet</td>
+							</tr>
+				   </tbody>
+				   </table>
 				</section>
 				<section>
 <h3>Service-Definition</h3>
@@ -983,6 +996,100 @@ sudo systemctl start docker</code></pre>
 				https://www.docker.com/sites/default/files/oyster-registry-3.png
 				http://blog.terranillius.com/post/composev3_swarm/
 			</section>
+			<section>
+				<section>
+					<h2>Build .Net Core App</h2>
+					<img src="images/DockerDotNET.jpg" alt="Logo .net and docker" / style="border: 0; height: 500px">
+				</section>
+				<section>
+					<h3>Build inside</h3>
+					Die Anwendung wird im Container während der Imageerstellung gebaut.
+					<br />
+					<br />
+					<table>
+						<tbody>
+							<tr>
+								<th>Vorteile</th>
+								<th>Nachteile</th>
+							</tr>
+							<tr>
+								<td>
+									<ul>
+										<li>Buildserver nicht erforderlich</li>
+										<li>Weniger komplex</li>
+									</ul>
+								</td>
+								<td>
+									<ul>
+										<li>Quellcode und Buildabhängigkeiten ggf. im Image enthalten</li>
+										<li>Basisimage größer (SDK erforderlich)</li>
+										<li>i.d.R. entstehen größere Images</li>
+										<li>Buildfehler schwerer zu debuggen</li>
+									</ul>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</section>
+				<section>
+					<h3>Build outside</h3>
+					Die Anwendung wird unabhängig vom Container erstellt. Die entstandenen Artefakte werden bei der Imageerstellung kopiert.
+					<br />
+					<br />
+					<table>
+						<tbody>
+							<tr>
+								<th>Vorteile</th>
+								<th>Nachteile</th>
+							</tr>
+							<tr>
+								<td>
+									<ul>
+										<li>i.d.R. kleinere Images und Basisimages</li>
+										<li>Build unabhängig von der Imageestellung</li>
+										<li>Quellcode und Buildabhängigkeiten nicht enthalten</li>
+									</ul>
+								</td>
+								<td>
+									<ul>
+										<li>Infrastruktur für Build erforderlich</li>
+										<li>Trennung erzeugt Komplexität</li>
+									</ul>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</section>
+				<section>
+					<h3>Multi-Stage Build</h3>
+					Die Anwendung wird während der Imageerstellung in einem temporären Container gebaut.
+					Die entstandenen Artefakte werden in den finalen Container kopiert.
+					<table>
+						<tbody>
+							<tr>
+								<th>Vorteile</th>
+								<th>Nachteile</th>
+							</tr>
+							<tr>
+								<td>
+									<ul>
+										<li>i.d.R. kleinere Images und Basisimages</li>
+										<li>Buildserver nicht erforderlich</li>
+										<li>Quellcode und Buildabhängigkeiten nicht enthalten</li>
+									</ul>
+								</td>
+								<td>
+									<ul>
+										<li>komplexere Dockerfiles</li>
+										<li>Mehrere Quellimages (SDK / Runtime) erforderlich</li>
+										<li>Buildfehler schwerer zu debuggen</li>
+									</ul>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</section>
+            </section>
 			</div>
 		</div>
 
