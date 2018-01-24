@@ -1,4 +1,4 @@
-FROM microsoft/dotnet:2.0.0-sdk-jessie AS builder
+FROM microsoft/dotnet:2.0-sdk-jessie AS builder
 
 WORKDIR /WebApp
 COPY src/WebApp /WebApp
@@ -7,9 +7,9 @@ RUN dotnet publish --configuration Release --output ./app  -r linux-arm
 
 
 
-FROM microsoft/aspnetcore:2.0.0-runtime-stretch-arm32v7
+FROM microsoft/dotnet:2.0-runtime-deps-stretch-arm32v7
 LABEL maintainer "frank@pommerening-online.de"
-ENV REFRESHED_AT 2017-10-31
+ENV REFRESHED_AT 2018-01-24
 
 WORKDIR /app
 

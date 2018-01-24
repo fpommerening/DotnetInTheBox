@@ -1,4 +1,4 @@
-FROM microsoft/dotnet:2.0.0-sdk-jessie AS builder
+FROM microsoft/dotnet:2.0-sdk-jessie AS builder
 
 WORKDIR /WebApp
 COPY src /WebApp
@@ -9,7 +9,7 @@ RUN dotnet publish --configuration Release --output ./app
 
 FROM microsoft/aspnetcore:2.0-jessie
 LABEL maintainer "frank@pommerening-online.de"
-ENV REFRESHED_AT 2017-11-01
+ENV REFRESHED_AT 2018-01-24
 
 WORKDIR /app
 

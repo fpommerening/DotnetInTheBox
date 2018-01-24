@@ -1,4 +1,4 @@
-FROM microsoft/dotnet:2.0.0-sdk-jessie AS builder
+FROM microsoft/dotnet:2.0-sdk-jessie AS builder
 
 WORKDIR /WebApp
 COPY WebApp /WebApp
