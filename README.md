@@ -12,6 +12,5 @@ Hamburg: .net in the big box
 <a href="https://fpommerening.github.io/DotnetInTheBox/dotnet_hh.html#/" target="_blank"> Teil 1</a>
 <a href="https://fpommerening.github.io/openfaas-dotnet/openfaas_hh.html#/" target="_blank"> Teil 2</a>
  (01.11.2017)
-
-
  <br />
+ Dresden: <a href="https://fpommerening.github.io/DotnetInTheBox/leichtmatrosen_dd.html#/" target="_blank"> Docker für Leichtmatrosen</a> (24.01.2018)<br />
