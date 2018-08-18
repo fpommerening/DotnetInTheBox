@@ -8,12 +8,13 @@ var configuration = Argument("configuration", "Release");
 
 var publishDir = Directory("../../tmp/webapp/");
 var dockerDir = Directory("./dockerfiles/webapp/");
-
+var appDir = Directory("./dockerfiles/webapp/app");
 
 Task("Clean")
     .Does(() =>
 {
     CleanDirectory(publishDir);
+    CleanDirectory(appDir);
 });
 
 Task("Restore")
@@ -30,7 +31,7 @@ Task("Build")
 {
    var settings = new DotNetCoreBuildSettings
      {
-         Framework = "netcoreapp2.0",
+         Framework = "netcoreapp2.1",
          Configuration = configuration,
          OutputDirectory = "./artifacts/"
      };
@@ -44,7 +45,7 @@ Task("Publish")
 {
       var settings = new DotNetCorePublishSettings
      {
-         Framework = "netcoreapp2.0",
+         Framework = "netcoreapp2.1",
          Configuration = configuration,
          OutputDirectory = publishDir
      };
