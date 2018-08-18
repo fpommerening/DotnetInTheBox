@@ -1,0 +1,21 @@
+version: "3.4"
+services:
+    webapp:
+        # image: fpommerening/dotnetinthebox:configs
+        image: configs:latest
+        ports:
+            - 5000:5000
+        networks:
+            - webnet
+     #   configs:
+     #        - source: appsetting
+     #          target: /app/appsettings.json
+        
+configs:
+   appsetting:
+     #  external:
+     #      name: greeting.json
+        file: ./appsettings.json
+networks:
+    webnet:
+       driver: overlay
