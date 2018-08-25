@@ -1,4 +1,4 @@
-FROM microsoft/dotnet:2.1-sdk
+FROM microsoft/dotnet:2.1-sdk-nanoserver-sac2016
 LABEL maintainer "frank@pommerening-online.de"
 ENV REFRESHED_AT 2018-08-16
 
