@@ -7,7 +7,8 @@ using System.Threading.Tasks;
 using Docker.DotNet;
 using Docker.DotNet.Models;
 
-namespace FP.DotnetnTheBox.Webhock.Modules
+
+namespace FP.DotnetnTheBox.Webhock.Controller
 {
     public class ContainerHelper : IDisposable
     {
@@ -18,25 +19,20 @@ namespace FP.DotnetnTheBox.Webhock.Modules
             _client = new DockerClientConfiguration(new Uri(endpointUrl)).CreateClient();
         }
 
-        public async Task PullImage(string owner, string name, string tag)
+        public async Task PullImage(string owner, string name, string tag, CancellationToken ct)
         {
-            var pullParams = new ImagesPullParameters
+            var pullParams = new ImagesCreateParameters
             {
-                Parent = string.IsNullOrEmpty(owner) ? name : $"{owner}/{name}",
+                Repo = string.IsNullOrEmpty(owner) ? name : $"{owner}/{name}",
                 Tag = tag
             };
 
-
-            var stream = await _client.Images.PullImageAsync(pullParams, null);
-            using (var sr = new StreamReader(stream))
-            {
-                await sr.ReadToEndAsync();
-            }
+            await _client.Images.CreateImageAsync(pullParams, null, null,ct);
         }
 
-        public async Task StopContainer(string id, CancellationToken token)
+        public async Task StopContainer(string id, CancellationToken ct)
         {
-            await _client.Containers.StopContainerAsync(id, new ContainerStopParameters(), token);
+            await _client.Containers.StopContainerAsync(id, new ContainerStopParameters(), ct);
         }
 
         public Task DeleteContainer(string containerId)
@@ -44,7 +40,7 @@ namespace FP.DotnetnTheBox.Webhock.Modules
             return _client.Containers.RemoveContainerAsync(containerId, new ContainerRemoveParameters());
         }
 
-        public async Task<string> StartContainer(string containerName, string owner, string name, string tag, string portMap)
+        public async Task<string> StartContainer(string containerName, string owner, string name, string tag, string portMap, CancellationToken ct)
         {
             var createParam = new CreateContainerParameters();
             if (string.IsNullOrEmpty(owner))
@@ -62,14 +58,13 @@ namespace FP.DotnetnTheBox.Webhock.Modules
                 var containerPort = portMap.Split('#').First();
                 var hostPort = portMap.Split('#').Last();
 
-
-                createParam.ExposedPorts = new Dictionary<string, object>
+                createParam.ExposedPorts = new Dictionary<string, EmptyStruct>
                 {
                     {
-                        containerPort, new { HostPort = hostPort }
+                        containerPort, new EmptyStruct()
                     }
                 };
-
+                 
                 createParam.HostConfig = new HostConfig
                 {
                     PortBindings = new Dictionary<string, IList<PortBinding>>
@@ -81,17 +76,17 @@ namespace FP.DotnetnTheBox.Webhock.Modules
                 };
             }
 
-            var result = await _client.Containers.CreateContainerAsync(createParam);
+            var result = await _client.Containers.CreateContainerAsync(createParam,ct);
             if (result.Warnings != null && result.Warnings.Any())
             {
                 throw new Exception($"Warning by creating container {containerName} {string.Join("\n", result.Warnings)}");
             }
 
-            await _client.Containers.StartContainerAsync(result.ID, null);
+            await _client.Containers.StartContainerAsync(result.ID, null, ct);
             return result.ID;
         }
 
-        public async Task<string> GetContainerIdByName(string name)
+        public async Task<string> GetContainerIdByName(string name, CancellationToken ct)
         {
             var listParam = new ContainersListParameters
             {
@@ -102,7 +97,7 @@ namespace FP.DotnetnTheBox.Webhock.Modules
                 All = true
             };
 
-            var result = await _client.Containers.ListContainersAsync(listParam);
+            var result = await _client.Containers.ListContainersAsync(listParam, ct);
             if (!result.Any())
             {
                 return string.Empty;
