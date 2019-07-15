@@ -1,4 +1,4 @@
-FROM microsoft/dotnet:2.1-sdk AS builder
+FROM mcr.microsoft.com/dotnet/core/sdk:2.2 AS builder
 
 WORKDIR /WebApp
 COPY WebApp /WebApp
@@ -7,9 +7,9 @@ RUN dotnet publish --configuration Release --output ./app
 
 
 
-FROM microsoft/dotnet:2.1-aspnetcore-runtime
+FROM mcr.microsoft.com/dotnet/core/aspnet:2.2
 LABEL maintainer "frank@pommerening-online.de"
-ENV REFRESHED_AT 2018-08-18
+ENV REFRESHED_AT 2019-07-15
 
 WORKDIR /app
 
