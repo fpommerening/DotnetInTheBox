@@ -1,11 +1,16 @@
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Nancy.Owin;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace FP.DotnetInTheBox.BuildInside
 {
     public class Startup
     {
+        public void ConfigureServices(IServiceCollection services)
+        {
+            services.AddMvc();
+        }
+      
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             if (env.IsDevelopment())
@@ -13,7 +18,8 @@ namespace FP.DotnetInTheBox.BuildInside
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseOwin(x => x.UseNancy());
+            app.UseMvcWithDefaultRoute();
         }
+        
     }
 }
