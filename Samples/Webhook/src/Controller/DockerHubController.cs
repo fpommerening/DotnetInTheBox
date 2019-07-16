@@ -47,8 +47,8 @@ namespace FP.DotnetnTheBox.Webhock.Controller
             string containerName = EnvironmentVariable.GetValue("containername");
             string portMap = EnvironmentVariable.GetValueOrDefault("portmap", "");
 
-            var helper = new ContainerHelper(EnvironmentVariable.GetValueOrDefault("endpointUrl", "unix://var/run/docker.sock"));
-            await helper.PullImage(webhock.Repository.Owner, webhock.Repository.Name, webhock.PushData.Tag, ct);
+            var helper = new ContainerHelper(EnvironmentVariable.GetValueOrDefault("endpointUrl", "unix:///var/run/docker.sock"));
+            helper.PullImage(webhock.Repository.Owner, webhock.Repository.Name, webhock.PushData.Tag, ct);
             var containerId = await helper.GetContainerIdByName(containerName, ct);
             if (!string.IsNullOrEmpty(containerId))
             {

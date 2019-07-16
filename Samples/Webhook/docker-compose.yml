@@ -1,0 +1,19 @@
+version: "3.2"
+services:
+    webapp:
+        image: fpommerening/dotnetinthebox:webhook
+        ports:
+            - 7000:5000
+        networks:
+            - mynet
+        volumes:
+            - "/var/run/docker.sock:/var/run/docker.sock"
+        environment:
+          appkey: "41d436248561418fadb7adb5c192b5be"
+          containername: "websample"
+          portmap: "5000#5000"
+          imagename: "citest"
+          owner: "fpommerening"
+          tag: "latest"
+networks:
+    mynet:

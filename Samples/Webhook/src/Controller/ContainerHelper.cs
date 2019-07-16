@@ -19,15 +19,15 @@ namespace FP.DotnetnTheBox.Webhock.Controller
             _client = new DockerClientConfiguration(new Uri(endpointUrl)).CreateClient();
         }
 
-        public async Task PullImage(string owner, string name, string tag, CancellationToken ct)
+        public void PullImage(string owner, string name, string tag, CancellationToken ct)
         {
             var pullParams = new ImagesCreateParameters
             {
-                Repo = string.IsNullOrEmpty(owner) ? name : $"{owner}/{name}",
+                FromImage = string.IsNullOrEmpty(owner) ? name : $"{owner}/{name}",
                 Tag = tag
             };
 
-            await _client.Images.CreateImageAsync(pullParams, null, null,ct);
+            _client.Images.CreateImageAsync(pullParams, null, new Progress<JSONMessage>(msg => { }), ct).Wait(ct);
         }
 
         public async Task StopContainer(string id, CancellationToken ct)
